@@ -500,13 +500,17 @@ class App(tk.Tk):
         messagebox.showinfo("Başarılı", f"{tag_id} veritabanına kaydedildi!")
 
     def git_push(self):
-        season, episode, _ = self.validate_inputs()
-        if season is None:
-            return
-
-        s_str = str(season).zfill(2)
-        e_str = str(episode).zfill(2)
-        commit_msg = f"update: gadgets synced up to S{s_str}E{e_str}"
+        if self.gadgets_data:
+            last_g = self.gadgets_data[-1]
+            g_name = last_g.get("name") or last_g.get("id") or "Gadget"
+            s_val = last_g.get("season", 1)
+            e_val = last_g.get("episode", 1)
+            commit_msg = f"add: {g_name} (S{s_val:02d}E{e_val:02d})"
+        else:
+            season, episode, _ = self.validate_inputs()
+            if season is None:
+                return
+            commit_msg = f"add: gadgets (S{season:02d}E{episode:02d})"
 
         # Non-blocking Threading Implementation
         self.btn_git.config(state="disabled", text="⏳ Push Ediliyor...")
@@ -514,11 +518,32 @@ class App(tk.Tk):
 
         def run_git_commands():
             try:
-                subprocess.run(["git", "add", "."], check=True, capture_output=True)
-                subprocess.run(["git", "commit", "-m", commit_msg], check=True, capture_output=True)
+                try:
+                    import update_readme
+                    update_readme.update_readme()
+                except Exception:
+                    pass
+
+                # Değişiklik var mı kontrol et
+                status_res = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
+                has_uncommitted = bool(status_res.stdout.strip())
+
+                # Push edilmemiş yerel commit var mı kontrol et
+                unpushed_res = subprocess.run(["git", "log", "@{u}..HEAD", "--oneline"], capture_output=True, text=True)
+                has_unpushed = bool(unpushed_res.stdout.strip())
+
+                if not has_uncommitted and not has_unpushed:
+                    self.after(0, lambda: messagebox.showinfo("Bilgi", "GitHub zaten güncel! Gönderilecek yeni bir değişiklik bulunmuyor."))
+                    self.after(0, lambda: self.update_status("ℹ️ Değişiklik yok. GitHub zaten güncel.", "blue"))
+                    return
+
+                if has_uncommitted:
+                    subprocess.run(["git", "add", "."], check=True, capture_output=True)
+                    subprocess.run(["git", "commit", "-m", commit_msg], check=True, capture_output=True)
+
                 subprocess.run(["git", "push"], check=True, capture_output=True)
 
-                self.after(0, lambda: messagebox.showinfo("GitHub Push", "Değişiklikler başarıyla GitHub'a gönderildi!"))
+                self.after(0, lambda: messagebox.showinfo("GitHub Push", f"'{commit_msg}' başarıyla GitHub'a gönderildi!"))
                 self.after(0, lambda: self.update_status("✅ GitHub Push Tamamlandı!", "green"))
             except subprocess.CalledProcessError as err:
                 err_msg = err.stderr.decode('utf-8', errors='ignore') if err.stderr else str(err)

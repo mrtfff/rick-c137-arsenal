@@ -486,6 +486,13 @@ class GadgetViewerApp(tk.Tk):
             gname = name or "(İsimsiz)"
             self.tree.item(self.selected_gadget_id, values=(self.selected_gadget_id, code, gname))
             
+            # Automatically update README statistics
+            try:
+                import update_readme
+                update_readme.update_readme()
+            except Exception:
+                pass
+
             messagebox.showinfo("Başarılı", f"{self.selected_gadget_id} verileri kaydedildi!")
         except Exception as err:
             messagebox.showerror("Kaydetme Hatası", f"Dosya kaydedilemedi: {err}")
@@ -540,6 +547,13 @@ class GadgetViewerApp(tk.Tk):
         try:
             with open(GADGETS_FILE, "w", encoding="utf-8") as f:
                 json.dump(self.gadgets_data, f, ensure_ascii=False, indent=2)
+
+            # Automatically update README statistics
+            try:
+                import update_readme
+                update_readme.update_readme()
+            except Exception:
+                pass
 
             self.update_status(f"🗑️ {gid} silindi.", "red")
             self.selected_gadget_id = None

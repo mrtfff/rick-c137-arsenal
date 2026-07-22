@@ -57,16 +57,142 @@
   },
   {
     "id": "tag#005",
-    "name": null,
+    "name": "broken-leg serum",
     "season": 1,
     "episode": 1,
     "timestamp": "11:46",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "Heals broken legs",
+    "images": {
+      "full": "assets/season_01/episode_01/tag#005_full.png",
+      "focus": "assets/season_01/episode_01/tag#005_focus.png"
+    }
+  },
+  {
+    "id": "tag#006",
+    "name": "Wristwatch",
+    "season": 1,
+    "episode": 1,
+    "timestamp": "20:23",
     "category_id": 4,
     "c137_confirmed": true,
     "description": null,
     "images": {
-      "full": "assets/season_01/episode_01/tag#005_full.png",
-      "focus": "assets/season_01/episode_01/tag#005_focus.png"
+      "full": "assets/season_01/episode_01/tag#006_full.png",
+      "focus": "assets/season_01/episode_01/tag#006_focus.png"
+    }
+  },
+  {
+    "id": "tag#007",
+    "name": "IQ-Enhancing Helmet",
+    "season": 1,
+    "episode": 2,
+    "timestamp": "01:42",
+    "category_id": 4,
+    "c137_confirmed": true,
+    "description": "A high-tech helmet that instantly makes the wearer super-intelligent.",
+    "images": {
+      "full": "assets/season_01/episode_02/tag#007_full.png",
+      "focus": "assets/season_01/episode_02/tag#007_focus.png"
+    }
+  },
+  {
+    "id": "tag#008",
+    "name": "DreamBuds",
+    "season": 1,
+    "episode": 2,
+    "timestamp": "02:00",
+    "category_id": 4,
+    "c137_confirmed": true,
+    "description": "An earpiece device that lets you enter people's dreams.",
+    "images": {
+      "full": "assets/season_01/episode_02/tag#008_full.png",
+      "focus": "assets/season_01/episode_02/tag#008_focus.png"
+    }
+  },
+  {
+    "id": "tag#009",
+    "name": "The Neuro-Canine Exosuit",
+    "season": 1,
+    "episode": 2,
+    "timestamp": "10:15",
+    "category_id": 4,
+    "c137_confirmed": true,
+    "description": "A cybernetic suit integrated into a dog's body, giving it hyper-intelligence and mechanical power.",
+    "images": {
+      "full": "assets/season_01/episode_02/tag#009_full.png",
+      "focus": "assets/season_01/episode_02/tag#009_focus.png"
+    }
+  },
+  {
+    "id": "tag#010",
+    "name": "Volt-Breaker",
+    "season": 1,
+    "episode": 2,
+    "timestamp": "16:08",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "A stun-gun-like device that shoots high-voltage electric arcs to melt metal and break chains.",
+    "images": {
+      "full": "assets/season_01/episode_02/tag#010_full.png",
+      "focus": "assets/season_01/episode_02/tag#010_focus.png"
+    }
+  },
+  {
+    "id": "tag#011",
+    "name": "Shrink Pad",
+    "season": 1,
+    "episode": 3,
+    "timestamp": "03:08",
+    "category_id": 3,
+    "c137_confirmed": true,
+    "description": "A platform device that shrinks anyone standing on top of it.",
+    "images": {
+      "full": "assets/season_01/episode_03/tag#011_full.png",
+      "focus": "assets/season_01/episode_03/tag#011_focus.png"
+    }
+  },
+  {
+    "id": "tag#012",
+    "name": "Micro-Capsule Injector",
+    "season": 1,
+    "episode": 3,
+    "timestamp": "03:14",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "A large syringe used to inject a shrunken human inside a test tube into another person's body.",
+    "images": {
+      "full": "assets/season_01/episode_03/tag#012_full.png",
+      "focus": "assets/season_01/episode_03/tag#012_focus.png"
+    }
+  },
+  {
+    "id": "tag#013",
+    "name": "Magnification Beam",
+    "season": 1,
+    "episode": 3,
+    "timestamp": "12:07",
+    "category_id": 6,
+    "c137_confirmed": true,
+    "description": "A ray gun device that fires a beam to enlarge people or objects.",
+    "images": {
+      "full": "assets/season_01/episode_03/tag#013_full.png",
+      "focus": "assets/season_01/episode_03/tag#013_focus.png"
+    }
+  },
+  {
+    "id": "tag#014",
+    "name": "Ship-Mounted Enlarger Ray",
+    "season": 1,
+    "episode": 3,
+    "timestamp": "16:38",
+    "category_id": 8,
+    "c137_confirmed": true,
+    "description": "A spaceship-mounted laser cannon capable of enlarging targets to planet-sized proportions.",
+    "images": {
+      "full": "assets/season_01/episode_03/tag#014_full.png",
+      "focus": "assets/season_01/episode_03/tag#014_focus.png"
     }
   }
 ]

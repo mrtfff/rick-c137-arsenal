@@ -1,0 +1,58 @@
+[
+  {
+    "id": "tag#001",
+    "name": "space ship",
+    "season": 1,
+    "episode": 1,
+    "timestamp": "00:18",
+    "category_id": 2,
+    "c137_confirmed": true,
+    "description": null,
+    "images": {
+      "full": "assets/season_01/episode_01/tag#001_full.png",
+      "focus": "assets/season_01/episode_01/tag#001_focus.png"
+    }
+  },
+  {
+    "id": "tag#002",
+    "name": "freezer device",
+    "season": 1,
+    "episode": 1,
+    "timestamp": "05:53",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "It freezes the things it touches.",
+    "images": {
+      "full": "assets/season_01/episode_01/tag#002_full.png",
+      "focus": "assets/season_01/episode_01/tag#002_focus.png"
+    }
+  },
+  {
+    "id": "tag#003",
+    "name": "portal gun",
+    "season": 1,
+    "episode": 1,
+    "timestamp": "07:36",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "Can travel anywhere and everywhere",
+    "images": {
+      "full": "assets/season_01/episode_01/tag#003_full.png",
+      "focus": "assets/season_01/episode_01/tag#003_focus.png"
+    }
+  },
+  {
+    "id": "tag#004",
+    "name": "special grappling shoes",
+    "season": 1,
+    "episode": 1,
+    "timestamp": "09:35",
+    "category_id": 4,
+    "c137_confirmed": true,
+    "description": "\"you can basically just walk on any surface you want\"",
+    "images": {
+      "full": "assets/season_01/episode_01/tag#004_full.png",
+      "focus": "assets/season_01/episode_01/tag#004_focus.png"
+    }
+  }
+]

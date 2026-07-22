@@ -1,0 +1,36 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "Elde Taşınır Silah / Cihaz"
+    },
+    {
+      "id": 1,
+      "name": "Sibernetik / Vücut İmplantı"
+    },
+    {
+      "id": 2,
+      "name": "Araç / Taşıt / Uyarlama"
+    },
+    {
+      "id": 3,
+      "name": "Garaj / Laboratuvar Ekipmanı"
+    },
+    {
+      "id": 4,
+      "name": "Giyilebilir Ekipman / Zırh / Jetpack"
+    },
+    {
+      "id": 5,
+      "name": "Biyolojik / Genetik / Kimyasal İcat"
+    },
+    {
+      "id": 6,
+      "name": "Diğer / Özel İcat"
+    },
+    {
+      "id": 7,
+      "name": "Emin Değilim / Bilinmiyor"
+    }
+  ]
+}

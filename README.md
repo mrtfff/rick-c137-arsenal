@@ -14,13 +14,13 @@ Multiverse üzerindeki tüm C-137 Rick icatlarini, silahlarini ve deneysel tekno
 <!-- STATS:START -->
 | Metrik | Deger |
 | :--- | :--- |
-| Toplam Kayitli Icat / Silah | **14** |
+| Toplam Kayitli Icat / Silah | **15** |
 | Taranan Sezon Sayisi | **1** (Sezon 01) |
-| Taranan Bölüm Sayisi | **3** |
-| C-137 Onayli Icat Orani | **%100** (14/14) |
+| Taranan Bölüm Sayisi | **4** |
+| C-137 Onayli Icat Orani | **%100** (15/15) |
 
 ### Kategori Dagilimi
-- **Elde Taşınır Silah / Cihaz:** 5 adet
+- **Elde Taşınır Silah / Cihaz:** 6 adet
 - **Sibernetik / Vücut İmplantı:** 0 adet
 - **Araç / Taşıt / Uyarlama:** 1 adet
 - **Garaj / Laboratuvar Ekipmanı:** 1 adet

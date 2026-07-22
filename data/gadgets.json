@@ -194,5 +194,19 @@
       "full": "assets/season_01/episode_03/tag#014_full.png",
       "focus": "assets/season_01/episode_03/tag#014_focus.png"
     }
+  },
+  {
+    "id": "tag#015",
+    "name": "Soul Liquefier & Trap",
+    "season": 1,
+    "episode": 5,
+    "timestamp": "01:08",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "A device that melts alien souls and bodies, trapping their essence inside a containment box.",
+    "images": {
+      "full": "assets/season_01/episode_05/tag#015_full.png",
+      "focus": "assets/season_01/episode_05/tag#015_focus.png"
+    }
   }
 ]

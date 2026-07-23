@@ -1,81 +1,77 @@
-# Rick C-137 Gadget Logger & Arsenal
+# Rick C-137 Gadget Logger & Multiverse Arsenal
 
-Multiverse üzerindeki tüm C-137 Rick icatlarini, silahlarini ve deneysel teknolojilerini anlik ekran yakalama ile arsivleyen sistem.
-
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)
-![GUI](https://img.shields.io/badge/GUI-Tkinter-green?style=for-the-badge)
-![Pillow](https://img.shields.io/badge/Image-Pillow-orange?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
+An automated, high-precision archival system designed to log, categorize, and analyze all inventions, weapons, and experimental technologies used by Rick Sanchez (Dimension C-137) across the multiverse.
 
 ---
 
-## ARSENAL ISTATISTIKLERI (CANLI VERI)
+## Multiverse Arsenal Metrics
 
 <!-- STATS:START -->
-| Metrik | Deger |
+| Metric | Value |
 | :--- | :--- |
-| Toplam Kayitli Icat / Silah | **43** |
-| Taranan Sezon Sayisi | **2** (Sezon 01 - 02) |
-| Taranan Bölüm Sayisi | **11** |
-| C-137 Onayli Icat Orani | **%95** (41/43) |
+| Total Registered Inventions | **43** |
+| Seasons Scanned | **2** (Season 01 - 02) |
+| Episodes Scanned | **12** |
+| Confirmed C-137 Invention Ratio | **95%** (41/43) |
 
-### Kategori Dagilimi
-- **Elde Taşınır Silah / Cihaz:** 18 adet
-- **Sibernetik / Vücut İmplantı:** 0 adet
-- **Araç / Taşıt / Uyarlama:** 1 adet
-- **Garaj / Laboratuvar Ekipmanı:** 4 adet
-- **Giyilebilir Ekipman / Zırh / Jetpack:** 8 adet
-- **Biyolojik / Genetik / Kimyasal İcat:** 4 adet
-- **Diğer / Özel İcat:** 7 adet
-- **Emin Değilim / Bilinmiyor:** 0 adet
-- **mekiğe takılı cihazlar:** 1 adet
+### Category Breakdown
+- **Handheld Weapon / Device:** 18 items
+- **Cybernetic / Body Implant:** 0 items
+- **Vehicle / Adaptation:** 1 items
+- **Garage / Lab Equipment:** 4 items
+- **Wearable Equipment / Armor / Jetpack:** 8 items
+- **Biological / Genetic / Chemical Invention:** 4 items
+- **Other / Special Invention:** 7 items
+- **Unclassified / Unknown:** 0 items
+- **Ship-Mounted Device:** 1 items
 
-### Tehdit Seviyesi Dagilimi
-- **[0] Zararsız / İşlevsel:** 15 adet
-- **[1] Dolaylı Tehlike / Taktiksel:** 11 adet
-- **[2] Kişisel / Doğrudan Hasar:** 8 adet
-- **[3] Kitle / Bölgesel Tahrip:** 4 adet
-- **[4] Gezegen / Medeniyet Tehdidi:** 1 adet
-- **[5] Evrensel / Gerçeklik Bükücü:** 0 adet
-- **[99] Emin Değilim / Bilinmiyor:** 4 adet
+### Threat Level Breakdown
+- **[0] Harmless / Utility:** 15 items
+- **[1] Indirect Hazard / Tactical:** 11 items
+- **[2] Personal Lethality:** 8 items
+- **[3] Area Destruction:** 4 items
+- **[4] Planetary Threat:** 1 items
+- **[5] Multiversal / Reality Bending:** 0 items
+- **[99] Unclassified / Unknown:** 4 items
 <!-- STATS:END -->
 
 ---
 
-## MODÜLLER VE KULLANIM
+## Architecture & System Modules
 
-### 1. Ana Uygulama (`main.py`)
-Rick and Morty izlerken ekran görüntüsü yakalayip hizlica veritabanina eklemek için kullanilir.
+### 1. Main Logger Interface (`main.py`)
+Primary screen capture overlay and cataloging interface used during episode analysis to snapshot and record gadgets in real time.
 
 ```bash
 python main.py
 ```
 
-| Kontrol | Eylem |
+| Control | Action |
 | :--- | :--- |
-| **`x` Tusu** | Ekran yakalama akisini baslatir (Input kutularinda yazarken tetiklenmez). |
-| **1/2 Seçim** | Tam sahne alanini çiz (Iptal için `ESC` veya `Sag Tik`). |
-| **2/2 Seçim** | Sadece aletin/silahin odak alanini çiz. |
-| **Form Kayit** | Sezon, bölüm, zaman kodu (`MM:SS`) ve kategoriyi seçip `KAYDET` butonuna bas. |
+| **`x` Key** | Triggers dual-region screen capture overlay (bypassed when typing in text inputs). |
+| **Capture Step 1** | Draw bounding box for full scene context (ESC or Right-Click to cancel). |
+| **Capture Step 2** | Draw targeted bounding box specifically around the gadget/weapon. |
+| **Form Entry** | Specify Season, Episode, Timestamp (`MM:SS`), Category, Threat Level, and Save. |
 
 ---
 
-### 2. Görüntüleyici ve Düzenleyici (`viewer.py`)
-Kayitli icatlari incelemek, filtrelemek ve verileri güncellemek için kullanilir.
+### 2. Arsenal Viewer & Editor (`viewer.py`)
+Interactive dashboard for exploring, filtering, multi-item editing, and synchronizing catalog data.
 
 ```bash
 python viewer.py
 ```
 
-* **Canli Arama:** Isim, Tag ID, sezon/bölüm veya açiklamaya göre anlik filtreleme.
-* **Çift Önizleme:** Tam sahne ve odak resimlerini yan yana görme, üzerine tiklayarak tam ekran inceleme.
-* **Düzenleme & Silme:** Kayitli verileri güncelleme veya veritabanindan/diskten kaldirma.
-* **Git Push:** Degisiklikleri tek tikla GitHub'a gönderme.
+* **Live Multi-Criteria Search:** Instant filtering by ID (`tag#003`), name, episode code (`S01E01`), description, category, or threat level.
+* **Dual Preview & Inspection:** Side-by-side view of full scene and focus crops with interactive full-screen zoom modal.
+* **Batch Staged Editing:** Modify multiple items sequentially in memory and save all changes to disk in a single atomic operation.
+* **Keyboard Speed Classification:** Use number keys (`1` - `6`, `7`/`9`/`0`) to set threat level or category instantly, and press `AltGr` to jump directly to the next gadget while preserving control focus.
+* **GitHub Integration:** One-click repository commit and push workflow with automated stat updates.
 
 ---
 
-### 3. Istatistik Güncelleyici (`update_readme.py`)
-`README.md` dosyasindaki veri istatistiklerini `data/gadgets.json` verilerine göre dinamik olarak günceller.
+### 3. Automated Readme Stats Generator (`update_readme.py`)
+Dynamically parses `data/gadgets.json` and updates metric tables in `README.md`.
 
 ```bash
 python update_readme.py
@@ -83,9 +79,9 @@ python update_readme.py
 
 ---
 
-## VERI ARSIV YAPISI (`data/gadgets.json`)
+## Data Schema (`data/gadgets.json`)
 
-Ekran görüntüleri `assets/season_XX/episode_YY/` klasör yapisinda otomatik depolanir. JSON verisi su formattadir:
+Screen capture assets are organized under `assets/season_XX/episode_YY/`. Each gadget entry strictly adheres to the following JSON structure:
 
 ```json
 {
@@ -95,6 +91,7 @@ Ekran görüntüleri `assets/season_XX/episode_YY/` klasör yapisinda otomatik d
   "episode": 1,
   "timestamp": "07:36",
   "category_id": 0,
+  "threat_level": 1,
   "c137_confirmed": true,
   "description": "Can travel anywhere and everywhere",
   "images": {
@@ -106,6 +103,6 @@ Ekran görüntüleri `assets/season_XX/episode_YY/` klasör yapisinda otomatik d
 
 ---
 
-## LISANS
+## License
 
-Bu proje [MIT Lisansi](LICENSE) altinda lisanslanmistir.
+This project is licensed under the [MIT License](LICENSE).

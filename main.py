@@ -29,7 +29,32 @@ ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 BACKUP_DIR = os.path.join(DATA_DIR, "backups")
 GADGETS_FILE = os.path.join(DATA_DIR, "gadgets.json")
 CATEGORIES_FILE = os.path.join(DATA_DIR, "categories.json")
+THREAT_LEVELS_FILE = os.path.join(DATA_DIR, "threat_levels.json")
 WORK_TIMER_FILE = os.path.join(DATA_DIR, "work_timer.json")
+
+
+def parse_timestamp_to_seconds(ts_str):
+    if not ts_str or not isinstance(ts_str, str):
+        return 0
+    parts = ts_str.strip().split(":")
+    try:
+        if len(parts) == 3:
+            return int(parts[0]) * 3600 + int(parts[1]) * 60 + int(parts[2])
+        elif len(parts) == 2:
+            return int(parts[0]) * 60 + int(parts[1])
+        elif len(parts) == 1:
+            return int(parts[0])
+    except ValueError:
+        return 0
+    return 0
+
+
+def gadget_sort_key(gadget):
+    """Aletleri Sezon -> Bölüm -> Zaman Kodu -> ID sırasına göre dizer."""
+    season = gadget.get("season", 0) or 0
+    episode = gadget.get("episode", 0) or 0
+    ts_seconds = parse_timestamp_to_seconds(gadget.get("timestamp"))
+    return (season, episode, ts_seconds, gadget.get("id", ""))
 
 
 def initialize_environment():
@@ -54,6 +79,22 @@ def initialize_environment():
         }
         with open(CATEGORIES_FILE, "w", encoding="utf-8") as f:
             json.dump(default_cats, f, ensure_ascii=False, indent=2)
+
+    # Threat Levels JSON Auto-creation
+    if not os.path.exists(THREAT_LEVELS_FILE):
+        default_threats = {
+            "threat_levels": [
+                { "id": 0, "name": "Zararsız / İşlevsel" },
+                { "id": 1, "name": "Dolaylı Tehlike / Taktiksel" },
+                { "id": 2, "name": "Kişisel / Doğrudan Hasar" },
+                { "id": 3, "name": "Kitle / Bölgesel Tahrip" },
+                { "id": 4, "name": "Gezegen / Medeniyet Tehdidi" },
+                { "id": 5, "name": "Evrensel / Gerçeklik Bükücü" },
+                { "id": 99, "name": "Emin Değilim / Bilinmiyor" }
+            ]
+        }
+        with open(THREAT_LEVELS_FILE, "w", encoding="utf-8") as f:
+            json.dump(default_threats, f, ensure_ascii=False, indent=2)
 
     # Gadgets JSON Auto-creation
     if not os.path.exists(GADGETS_FILE):
@@ -151,6 +192,7 @@ class App(tk.Tk):
         self.is_capturing = False
 
         self.categories_data = self.load_categories()
+        self.threat_levels_data = self.load_threat_levels()
         self.gadgets_data = self.load_gadgets()
 
         # Work Timer Initialization
@@ -168,6 +210,15 @@ class App(tk.Tk):
         except Exception as e:
             if os.path.exists(CATEGORIES_FILE):
                 messagebox.showwarning("Kategori Hatası", f"categories.json okunamadı: {e}")
+            return []
+
+    def load_threat_levels(self):
+        try:
+            with open(THREAT_LEVELS_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)["threat_levels"]
+        except Exception as e:
+            if os.path.exists(THREAT_LEVELS_FILE):
+                messagebox.showwarning("Tehdit Seviyesi Hatası", f"threat_levels.json okunamadı: {e}")
             return []
 
     def load_gadgets(self):
@@ -291,6 +342,17 @@ class App(tk.Tk):
         if cat_names:
             self.cat_combobox.current(0)
         self.cat_combobox.pack(fill="x", padx=5, pady=2)
+        self.cat_combobox.bind("<Key>", self.on_cat_key_press)
+
+        # Threat Level
+        tk.Label(form_frame, text="Tehdit Seviyesi:").pack(anchor="w", padx=5, pady=(5, 0))
+        threat_names = [f"[{t['id']}] {t['name']}" for t in self.threat_levels_data]
+        self.threat_combobox = ttk.Combobox(form_frame, values=threat_names, state="readonly")
+        if threat_names:
+            idx_99 = next((i for i, t in enumerate(self.threat_levels_data) if t["id"] == 99), 0)
+            self.threat_combobox.current(idx_99)
+        self.threat_combobox.pack(fill="x", padx=5, pady=2)
+        self.threat_combobox.bind("<Key>", self.on_threat_key_press)
 
         # C-137 Checkbox
         self.c137_var = tk.BooleanVar(value=True)
@@ -345,6 +407,45 @@ class App(tk.Tk):
         # Status Bar (UX Display)
         self.status_bar = tk.Label(self, text="🔴 Görsel Bekleniyor ('x' tuşuna basın)", bd=1, relief="sunken", anchor="w", fg="red")
         self.status_bar.pack(side="bottom", fill="x")
+
+    def on_cat_key_press(self, event):
+        key = event.char
+        mapping = {
+            '1': 0,
+            '2': 1,
+            '3': 2,
+            '4': 3,
+            '5': 4,
+            '6': 5,
+            '7': 6,
+            '8': 7,
+            '9': 8,
+            '0': 0
+        }
+        if key in mapping:
+            idx = mapping[key]
+            if idx < len(self.categories_data):
+                self.cat_combobox.current(idx)
+                return "break"
+
+    def on_threat_key_press(self, event):
+        key = event.char
+        mapping = {
+            '1': 0,
+            '2': 1,
+            '3': 2,
+            '4': 3,
+            '5': 4,
+            '6': 5,
+            '7': 6,
+            '9': 6,
+            '0': 0
+        }
+        if key in mapping:
+            idx = mapping[key]
+            if idx < len(self.threat_levels_data):
+                self.threat_combobox.current(idx)
+                return "break"
 
     def on_min_key_release(self, event):
         """Dakika kutusuna 2 rakam girildiğinde imleç otomatik Saniye kutusuna atlar."""
@@ -543,6 +644,9 @@ class App(tk.Tk):
         cat_idx = self.cat_combobox.current()
         cat_id = self.categories_data[cat_idx]["id"] if cat_idx >= 0 else 7
 
+        threat_idx = self.threat_combobox.current()
+        threat_level = self.threat_levels_data[threat_idx]["id"] if threat_idx >= 0 else 99
+
         # Duplicate Warning
         if name and self.check_duplicate_name(name):
             res = messagebox.askyesno("Mükerrer Uyarısı", f"'{name}' isimli alet daha önce kaydedilmiş!\nSadece İLK defa görünen aletleri kaydediyoruz.\nYine de yeni bir kayıt açmak istiyor musunuz?")
@@ -573,6 +677,7 @@ class App(tk.Tk):
             "episode": episode,
             "timestamp": timestamp,
             "category_id": cat_id,
+            "threat_level": threat_level,
             "c137_confirmed": c137,
             "description": description,
             "images": {
@@ -582,6 +687,7 @@ class App(tk.Tk):
         }
 
         self.gadgets_data.append(entry)
+        self.gadgets_data.sort(key=gadget_sort_key)
 
         # Save Backup before overwriting GADGETS_FILE
         if os.path.exists(GADGETS_FILE):

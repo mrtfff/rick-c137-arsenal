@@ -1,0 +1,32 @@
+{
+  "threat_levels": [
+    {
+      "id": 0,
+      "name": "Zararsız / İşlevsel"
+    },
+    {
+      "id": 1,
+      "name": "Dolaylı Tehlike / Taktiksel"
+    },
+    {
+      "id": 2,
+      "name": "Kişisel / Doğrudan Hasar"
+    },
+    {
+      "id": 3,
+      "name": "Kitle / Bölgesel Tahrip"
+    },
+    {
+      "id": 4,
+      "name": "Gezegen / Medeniyet Tehdidi"
+    },
+    {
+      "id": 5,
+      "name": "Evrensel / Gerçeklik Bükücü"
+    },
+    {
+      "id": 99,
+      "name": "Emin Değilim / Bilinmiyor"
+    }
+  ]
+}

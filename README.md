@@ -14,21 +14,30 @@ Multiverse üzerindeki tüm C-137 Rick icatlarini, silahlarini ve deneysel tekno
 <!-- STATS:START -->
 | Metrik | Deger |
 | :--- | :--- |
-| Toplam Kayitli Icat / Silah | **37** |
-| Taranan Sezon Sayisi | **1** (Sezon 01) |
-| Taranan Bölüm Sayisi | **10** |
-| C-137 Onayli Icat Orani | **%97** (36/37) |
+| Toplam Kayitli Icat / Silah | **43** |
+| Taranan Sezon Sayisi | **2** (Sezon 01 - 02) |
+| Taranan Bölüm Sayisi | **11** |
+| C-137 Onayli Icat Orani | **%95** (41/43) |
 
 ### Kategori Dagilimi
-- **Elde Taşınır Silah / Cihaz:** 15 adet
+- **Elde Taşınır Silah / Cihaz:** 18 adet
 - **Sibernetik / Vücut İmplantı:** 0 adet
 - **Araç / Taşıt / Uyarlama:** 1 adet
-- **Garaj / Laboratuvar Ekipmanı:** 3 adet
-- **Giyilebilir Ekipman / Zırh / Jetpack:** 7 adet
+- **Garaj / Laboratuvar Ekipmanı:** 4 adet
+- **Giyilebilir Ekipman / Zırh / Jetpack:** 8 adet
 - **Biyolojik / Genetik / Kimyasal İcat:** 4 adet
-- **Diğer / Özel İcat:** 6 adet
+- **Diğer / Özel İcat:** 7 adet
 - **Emin Değilim / Bilinmiyor:** 0 adet
 - **mekiğe takılı cihazlar:** 1 adet
+
+### Tehdit Seviyesi Dagilimi
+- **[0] Zararsız / İşlevsel:** 15 adet
+- **[1] Dolaylı Tehlike / Taktiksel:** 11 adet
+- **[2] Kişisel / Doğrudan Hasar:** 8 adet
+- **[3] Kitle / Bölgesel Tahrip:** 4 adet
+- **[4] Gezegen / Medeniyet Tehdidi:** 1 adet
+- **[5] Evrensel / Gerçeklik Bükücü:** 0 adet
+- **[99] Emin Değilim / Bilinmiyor:** 4 adet
 <!-- STATS:END -->
 
 ---

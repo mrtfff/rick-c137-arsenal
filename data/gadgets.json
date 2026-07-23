@@ -357,10 +357,80 @@
     "timestamp": "03:26",
     "category_id": 4,
     "c137_confirmed": true,
-    "description": "\"These scan your retinas, and let you view parallel time lines through genetically matching versions of your eyes\" (Rick)",
+    "description": "\"These scan your retinas, and let you view parallel time lines through genetically matching versions of your eyes\" (rick)",
     "images": {
       "full": "assets/season_01/episode_08/tag#026_full.png",
       "focus": "assets/season_01/episode_08/tag#026_focus.png"
+    }
+  },
+  {
+    "id": "tag#027",
+    "name": "Butter Robot (official)",
+    "season": 1,
+    "episode": 9,
+    "timestamp": "00:37",
+    "category_id": 6,
+    "c137_confirmed": true,
+    "description": "A small sentient robot created by Rick for the sole purpose of passing the butter at the breakfast table.",
+    "images": {
+      "full": "assets/season_01/episode_09/tag#027_full.png",
+      "focus": "assets/season_01/episode_09/tag#027_focus.png"
+    }
+  },
+  {
+    "id": "tag#028",
+    "name": "Curse Scanner",
+    "season": 1,
+    "episode": 9,
+    "timestamp": "04:16",
+    "category_id": 3,
+    "c137_confirmed": true,
+    "description": "A garage lab scanner built by Rick to detect and analyze curses on magical items sold by the Devil.",
+    "images": {
+      "full": "assets/season_01/episode_09/tag#028_full.png",
+      "focus": "assets/season_01/episode_09/tag#028_focus.png"
+    }
+  },
+  {
+    "id": "tag#029",
+    "name": "Curse-Purging Syringe",
+    "season": 1,
+    "episode": 9,
+    "timestamp": "05:22",
+    "category_id": 5,
+    "c137_confirmed": true,
+    "description": "A tiny syringe filled with a liquid serum created by Rick to purge and neutralize magical curses.",
+    "images": {
+      "full": "assets/season_01/episode_09/tag#029_full.png",
+      "focus": "assets/season_01/episode_09/tag#029_focus.png"
+    }
+  },
+  {
+    "id": "tag#030",
+    "name": "Curse Categorizer & Analyzer",
+    "season": 1,
+    "episode": 9,
+    "timestamp": "05:36",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "A scanning device that measures, categorizes, and prints out the specific type and effect of evil or curses in an object.",
+    "images": {
+      "full": "assets/season_01/episode_09/tag#030_full.png",
+      "focus": "assets/season_01/episode_09/tag#030_focus.png"
+    }
+  },
+  {
+    "id": "tag#031",
+    "name": "Curse-Purging Machine",
+    "season": 1,
+    "episode": 9,
+    "timestamp": "13:35",
+    "category_id": 6,
+    "c137_confirmed": true,
+    "description": "Large scientific machines installed in Rick's shop that use advanced technology to strip away and neutralize magical curses.",
+    "images": {
+      "full": "assets/season_01/episode_09/tag#031_full.png",
+      "focus": "assets/season_01/episode_09/tag#031_focus.png"
     }
   }
 ]

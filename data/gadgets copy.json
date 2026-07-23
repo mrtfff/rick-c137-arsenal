@@ -187,12 +187,110 @@
     "season": 1,
     "episode": 3,
     "timestamp": "16:38",
-    "category_id": 6,
+    "category_id": 8,
     "c137_confirmed": true,
     "description": "A spaceship-mounted laser cannon capable of enlarging targets to planet-sized proportions.",
     "images": {
       "full": "assets/season_01/episode_03/tag#014_full.png",
       "focus": "assets/season_01/episode_03/tag#014_focus.png"
+    }
+  },
+  {
+    "id": "tag#015",
+    "name": "Soul Liquefier & Trap",
+    "season": 1,
+    "episode": 5,
+    "timestamp": "01:08",
+    "category_id": 6,
+    "c137_confirmed": true,
+    "description": "A device that melts alien souls and bodies, trapping their essence inside a containment box.",
+    "images": {
+      "full": "assets/season_01/episode_05/tag#015_full.png",
+      "focus": "assets/season_01/episode_05/tag#015_focus.png"
+    }
+  },
+  {
+    "id": "tag#016",
+    "name": "Meeseeks Box",
+    "season": 1,
+    "episode": 5,
+    "timestamp": "02:40",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "A gadget that spawns a Mr. Meeseeks to fulfill a single task before vanishing.",
+    "images": {
+      "full": "assets/season_01/episode_05/tag#016_full.png",
+      "focus": "assets/season_01/episode_05/tag#016_focus.png"
+    }
+  },
+  {
+    "id": "tag#017",
+    "name": "Explosive Inflator Blaster",
+    "season": 1,
+    "episode": 5,
+    "timestamp": "18:56",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "A ray gun that fires a red beam, inflating targets until they explode.",
+    "images": {
+      "full": "assets/season_01/episode_05/tag#017_full.png",
+      "focus": "assets/season_01/episode_05/tag#017_focus.png"
+    }
+  },
+  {
+    "id": "tag#018",
+    "name": "iyonic defibulizer",
+    "season": 1,
+    "episode": 6,
+    "timestamp": "03:02",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": null,
+    "images": {
+      "full": "assets/season_01/episode_06/tag#018_full.png",
+      "focus": "assets/season_01/episode_06/tag#018_focus.png"
+    }
+  },
+  {
+    "id": "tag#019",
+    "name": "Rick Potion #9 (Official)",
+    "season": 1,
+    "episode": 6,
+    "timestamp": "03:40",
+    "category_id": 5,
+    "c137_confirmed": true,
+    "description": "A chemical potion made from oxytocin and Morty's DNA that makes anyone touched by it fall hopelessly in love.",
+    "images": {
+      "full": "assets/season_01/episode_06/tag#019_full.png",
+      "focus": "assets/season_01/episode_06/tag#019_focus.png"
+    }
+  },
+  {
+    "id": "tag#020",
+    "name": "Praying Mantis Serum",
+    "season": 1,
+    "episode": 6,
+    "timestamp": "08:34",
+    "category_id": 5,
+    "c137_confirmed": true,
+    "description": "A serum made from praying mantis DNA meant to cure the love virus, which instead turns people into praying mantis mutants.",
+    "images": {
+      "full": "assets/season_01/episode_06/tag#020_full.png",
+      "focus": "assets/season_01/episode_06/tag#020_focus.png"
+    }
+  },
+  {
+    "id": "tag#021",
+    "name": "Cronenberg Serum",
+    "season": 1,
+    "episode": 6,
+    "timestamp": "11:18",
+    "category_id": 5,
+    "c137_confirmed": true,
+    "description": "A complex multi-DNA serum meant to fix the mantis mutation, which accidentally mutates humanity into grotesque Cronenberg monsters.",
+    "images": {
+      "full": "assets/season_01/episode_06/tag#021_full.png",
+      "focus": "assets/season_01/episode_06/tag#021_focus.png"
     }
   }
 ]

@@ -29,6 +29,7 @@ ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 BACKUP_DIR = os.path.join(DATA_DIR, "backups")
 GADGETS_FILE = os.path.join(DATA_DIR, "gadgets.json")
 CATEGORIES_FILE = os.path.join(DATA_DIR, "categories.json")
+WORK_TIMER_FILE = os.path.join(DATA_DIR, "work_timer.json")
 
 
 def initialize_environment():
@@ -152,8 +153,13 @@ class App(tk.Tk):
         self.categories_data = self.load_categories()
         self.gadgets_data = self.load_gadgets()
 
+        # Work Timer Initialization
+        self.total_work_seconds, self.timer_running = self.load_timer_data()
+
         self.setup_ui()
         self.start_hotkey_listener()
+        self.protocol("WM_DELETE_WINDOW", self.on_closing)
+        self.after(1000, self.update_timer_tick)
 
     def load_categories(self):
         try:
@@ -295,6 +301,40 @@ class App(tk.Tk):
         self.desc_entry = tk.Entry(form_frame)
         self.desc_entry.pack(fill="x", padx=5, pady=2)
 
+        # Work Timer Bar (Placing right above KAYDET button)
+        timer_frame = tk.Frame(self, bg="#263238", bd=1, relief="ridge")
+        timer_frame.pack(fill="x", padx=10, pady=(6, 3))
+
+        initial_status = "⏱️ Çalışma Süresi:" if self.timer_running else "⏸️ Duraklatıldı:"
+        initial_color = "#80D8FF" if self.timer_running else "#FFE082"
+        initial_btn_text = "⏸️ Durdur" if self.timer_running else "▶️ Başlat"
+        initial_btn_bg = "#37474F" if self.timer_running else "#4E342E"
+
+        self.timer_label = tk.Label(
+            timer_frame,
+            text=f"{initial_status} {self.format_time_str(self.total_work_seconds)}",
+            font=("Segoe UI", 9, "bold"),
+            fg=initial_color,
+            bg="#263238"
+        )
+        self.timer_label.pack(side="left", padx=8, pady=3)
+
+        self.btn_toggle_timer = tk.Button(
+            timer_frame,
+            text=initial_btn_text,
+            font=("Segoe UI", 8, "bold"),
+            bg=initial_btn_bg,
+            fg="#ECEFF1",
+            activebackground="#455A64",
+            activeforeground="white",
+            bd=0,
+            padx=8,
+            pady=1,
+            cursor="hand2",
+            command=self.toggle_timer
+        )
+        self.btn_toggle_timer.pack(side="right", padx=6, pady=2)
+
         # Action Buttons
         btn_save = tk.Button(self, text="💾 KAYDET", bg="#2196F3", fg="white", font=("Arial", 11, "bold"), command=self.save_gadget)
         btn_save.pack(fill="x", padx=10, pady=3)
@@ -320,6 +360,72 @@ class App(tk.Tk):
 
     def change_alpha(self, val):
         self.attributes("-alpha", float(val))
+
+    def load_timer_data(self):
+        # 19:00 -> 01:22 = 6 saat 22 dakika (22920 saniye)
+        default_seconds = 6 * 3600 + 22 * 60
+        if not os.path.exists(WORK_TIMER_FILE):
+            return default_seconds, True
+        try:
+            with open(WORK_TIMER_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                sec = data.get("total_seconds", default_seconds)
+                running = data.get("is_running", True)
+                return sec, running
+        except Exception:
+            return default_seconds, True
+
+    def save_timer_data(self):
+        try:
+            with open(WORK_TIMER_FILE, "w", encoding="utf-8") as f:
+                json.dump({
+                    "total_seconds": self.total_work_seconds,
+                    "is_running": self.timer_running
+                }, f, indent=2)
+        except Exception:
+            pass
+
+    def format_time_str(self, total_seconds):
+        hours = total_seconds // 3600
+        minutes = (total_seconds % 3600) // 60
+        seconds = total_seconds % 60
+        return f"{hours:02d}sa {minutes:02d}dk {seconds:02d}sn"
+
+    def update_timer_tick(self):
+        if self.timer_running:
+            self.total_work_seconds += 1
+            self.timer_label.config(
+                text=f"⏱️ Çalışma Süresi: {self.format_time_str(self.total_work_seconds)}",
+                fg="#80D8FF"
+            )
+            if self.total_work_seconds % 5 == 0:
+                self.save_timer_data()
+        self.after(1000, self.update_timer_tick)
+
+    def toggle_timer(self):
+        if self.timer_running:
+            self.timer_running = False
+            self.btn_toggle_timer.config(text="▶️ Başlat", bg="#4E342E", fg="#FFECB3")
+            self.timer_label.config(
+                text=f"⏸️ Duraklatıldı: {self.format_time_str(self.total_work_seconds)}",
+                fg="#FFE082"
+            )
+        else:
+            self.timer_running = True
+            self.btn_toggle_timer.config(text="⏸️ Durdur", bg="#37474F", fg="#ECEFF1")
+            self.timer_label.config(
+                text=f"⏱️ Çalışma Süresi: {self.format_time_str(self.total_work_seconds)}",
+                fg="#80D8FF"
+            )
+        self.save_timer_data()
+
+    def auto_resume_timer(self):
+        if not self.timer_running:
+            self.toggle_timer()
+
+    def on_closing(self):
+        self.save_timer_data()
+        self.destroy()
 
     def update_status(self, text, color="black"):
         self.status_bar.config(text=text, fg=color)
@@ -487,6 +593,9 @@ class App(tk.Tk):
 
         with open(GADGETS_FILE, "w", encoding="utf-8") as f:
             json.dump(self.gadgets_data, f, ensure_ascii=False, indent=2)
+
+        # Veri kaydı yapıldığında duraklatılmışsa sayacı otomatik devam ettir
+        self.auto_resume_timer()
 
         # Reset Image Buffers & Text Inputs
         self.full_img = None

@@ -278,5 +278,89 @@
       "full": "assets/season_01/episode_06/tag#020_full.png",
       "focus": "assets/season_01/episode_06/tag#020_focus.png"
     }
+  },
+  {
+    "id": "tag#021",
+    "name": "Cronenberg Serum",
+    "season": 1,
+    "episode": 6,
+    "timestamp": "11:18",
+    "category_id": 5,
+    "c137_confirmed": true,
+    "description": "A complex multi-DNA serum meant to fix the mantis mutation, which accidentally mutates humanity into grotesque Cronenberg monsters.",
+    "images": {
+      "full": "assets/season_01/episode_06/tag#021_full.png",
+      "focus": "assets/season_01/episode_06/tag#021_focus.png"
+    }
+  },
+  {
+    "id": "tag#022",
+    "name": "Interdimensional Travel Backpack",
+    "season": 1,
+    "episode": 6,
+    "timestamp": "16:47",
+    "category_id": 4,
+    "c137_confirmed": true,
+    "description": "A futuristic backpack worn when permanently jumping to a new dimension to carry essential gear and equipment.",
+    "images": {
+      "full": "assets/season_01/episode_06/tag#022_full.png",
+      "focus": "assets/season_01/episode_06/tag#022_focus.png"
+    }
+  },
+  {
+    "id": "tag#023",
+    "name": "Rick's Laser Gun",
+    "season": 1,
+    "episode": 7,
+    "timestamp": "03:24",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "Rick's iconic handheld laser pistol that fires high-energy blasts.",
+    "images": {
+      "full": "assets/season_01/episode_07/tag#023_full.png",
+      "focus": "assets/season_01/episode_07/tag#023_focus.png"
+    }
+  },
+  {
+    "id": "tag#024",
+    "name": "Grappling Hook Gun",
+    "season": 1,
+    "episode": 7,
+    "timestamp": "07:35",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "A handheld device that fires a hooked rope to pull the user toward high places.",
+    "images": {
+      "full": "assets/season_01/episode_07/tag#024_full.png",
+      "focus": "assets/season_01/episode_07/tag#024_focus.png"
+    }
+  },
+  {
+    "id": "tag#025",
+    "name": "Interdimensional Cable Box(official)",
+    "season": 1,
+    "episode": 8,
+    "timestamp": "00:40",
+    "category_id": 6,
+    "c137_confirmed": true,
+    "description": "A modified cable box that receives television broadcasts from every dimension across the multiverse.",
+    "images": {
+      "full": "assets/season_01/episode_08/tag#025_full.png",
+      "focus": "assets/season_01/episode_08/tag#025_focus.png"
+    }
+  },
+  {
+    "id": "tag#026",
+    "name": "Interdimensional Goggles (official)",
+    "season": 1,
+    "episode": 8,
+    "timestamp": "03:26",
+    "category_id": 4,
+    "c137_confirmed": true,
+    "description": "\"These scan your retinas, and let you view parallel time lines through genetically matching versions of your eyes\" (rick)",
+    "images": {
+      "full": "assets/season_01/episode_08/tag#026_full.png",
+      "focus": "assets/season_01/episode_08/tag#026_focus.png"
+    }
   }
 ]

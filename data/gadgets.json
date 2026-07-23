@@ -432,5 +432,89 @@
       "full": "assets/season_01/episode_09/tag#031_full.png",
       "focus": "assets/season_01/episode_09/tag#031_focus.png"
     }
+  },
+  {
+    "id": "tag#032",
+    "name": "Blue Laser Pistol",
+    "season": 1,
+    "episode": 10,
+    "timestamp": "05:23",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "A classic handheld laser gun that fires blue high-energy laser blasts.",
+    "images": {
+      "full": "assets/season_01/episode_10/tag#032_full.png",
+      "focus": "assets/season_01/episode_10/tag#032_focus.png"
+    }
+  },
+  {
+    "id": "tag#033",
+    "name": "Brain-Downloading Device",
+    "season": 1,
+    "episode": 10,
+    "timestamp": "17:21",
+    "category_id": 6,
+    "c137_confirmed": false,
+    "description": "A cybernetic device with scalp probes used to scan and download the complete mind and memories of a target.",
+    "images": {
+      "full": "assets/season_01/episode_10/tag#033_full.png",
+      "focus": "assets/season_01/episode_10/tag#033_focus.png"
+    }
+  },
+  {
+    "id": "tag#034",
+    "name": "Holographic Galaxy Projector",
+    "season": 1,
+    "episode": 11,
+    "timestamp": "10:01",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "A device that projects interactive 3D holographic models of galaxies into the air.",
+    "images": {
+      "full": "assets/season_01/episode_11/tag#034_full.png",
+      "focus": "assets/season_01/episode_11/tag#034_focus.png"
+    }
+  },
+  {
+    "id": "tag#035",
+    "name": "House Dimensional Teleporter",
+    "season": 1,
+    "episode": 11,
+    "timestamp": "10:27",
+    "category_id": 3,
+    "c137_confirmed": true,
+    "description": "A powerful garage machine capable of teleporting Rick's entire house and yard into another dimension.",
+    "images": {
+      "full": "assets/season_01/episode_11/tag#035_full.png",
+      "focus": "assets/season_01/episode_11/tag#035_focus.png"
+    }
+  },
+  {
+    "id": "tag#036",
+    "name": "Kalaxian Crystal Detector",
+    "season": 1,
+    "episode": 11,
+    "timestamp": "11:19",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "A handheld scanner that detects and tracks the location and distance of Kalaxian Crystals.",
+    "images": {
+      "full": "assets/season_01/episode_11/tag#036_full.png",
+      "focus": "assets/season_01/episode_11/tag#036_focus.png"
+    }
+  },
+  {
+    "id": "tag#037",
+    "name": "Time-Freezing Device",
+    "season": 1,
+    "episode": 11,
+    "timestamp": "00:00",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "A handheld device that completely freezes time across the universe, allowing the user to move freely while everything else remains stopped.",
+    "images": {
+      "full": "assets/season_01/episode_11/tag#037_full.png",
+      "focus": "assets/season_01/episode_11/tag#037_focus.png"
+    }
   }
 ]

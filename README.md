@@ -1,6 +1,6 @@
 # Rick C-137 Gadget Logger & Multiverse Arsenal
 
-An automated, high-precision archival system designed to log, categorize, and analyze all inventions, weapons, and experimental technologies used by Rick Sanchez (Dimension C-137) across the multiverse.
+A high-precision manual screen-capture logging and archiving system designed to manually snapshot, categorize, and record all inventions, weapons, and experimental technologies used by Rick Sanchez (Dimension C-137) while watching the show.
 
 ---
 
@@ -9,27 +9,27 @@ An automated, high-precision archival system designed to log, categorize, and an
 <!-- STATS:START -->
 | Metric | Value |
 | :--- | :--- |
-| Total Registered Inventions | **43** |
-| Seasons Scanned | **2** (Season 01 - 02) |
-| Episodes Scanned | **12** |
-| Confirmed C-137 Invention Ratio | **95%** (41/43) |
+| Total Registered Inventions | **71** |
+| Seasons Analyzed | **2** (Season 01 - 02) |
+| Episodes Analyzed | **17** |
+| Confirmed C-137 Invention Ratio | **97%** (69/71) |
 
 ### Category Breakdown
-- **Handheld Weapon / Device:** 18 items
+- **Handheld Weapon / Device:** 29 items
 - **Cybernetic / Body Implant:** 0 items
-- **Vehicle / Adaptation:** 1 items
-- **Garage / Lab Equipment:** 4 items
-- **Wearable Equipment / Armor / Jetpack:** 8 items
-- **Biological / Genetic / Chemical Invention:** 4 items
+- **Vehicle / Adaptation:** 3 items
+- **Garage / Lab Equipment:** 6 items
+- **Wearable Equipment / Armor / Jetpack:** 12 items
+- **Biological / Genetic / Chemical Invention:** 6 items
 - **Other / Special Invention:** 7 items
 - **Unclassified / Unknown:** 0 items
-- **Ship-Mounted Device:** 1 items
+- **Ship-Mounted Device:** 8 items
 
 ### Threat Level Breakdown
-- **[0] Harmless / Utility:** 15 items
-- **[1] Indirect Hazard / Tactical:** 11 items
-- **[2] Personal Lethality:** 8 items
-- **[3] Area Destruction:** 4 items
+- **[0] Harmless / Utility:** 23 items
+- **[1] Indirect Hazard / Tactical:** 17 items
+- **[2] Personal Lethality:** 20 items
+- **[3] Area Destruction:** 6 items
 - **[4] Planetary Threat:** 1 items
 - **[5] Multiversal / Reality Bending:** 0 items
 - **[99] Unclassified / Unknown:** 4 items

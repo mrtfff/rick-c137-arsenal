@@ -27,7 +27,7 @@ def parse_timestamp_to_seconds(ts_str):
 
 
 def gadget_sort_key(gadget):
-    """Aletleri Sezon -> Bölüm -> Zaman Kodu -> ID sırasına göre dizer."""
+    """Sorts gadgets chronologically: Season -> Episode -> Timestamp -> ID."""
     season = gadget.get("season", 0) or 0
     episode = gadget.get("episode", 0) or 0
     ts_seconds = parse_timestamp_to_seconds(gadget.get("timestamp"))
@@ -59,17 +59,18 @@ def generate_stats_markdown():
     threat_counts = {t["id"]: 0 for t in threat_levels}
 
     total_gadgets = len(gadgets)
-    seasons = set()
-    episodes = set()
+    seasons = sorted(list(set(g.get("season") for g in gadgets if g.get("season") is not None)))
+
+    # Calculate total episodes scanned: sum of maximum episode scanned in each season
+    total_episodes_scanned = 0
+    for s in seasons:
+        eps = [g.get("episode", 0) for g in gadgets if g.get("season") == s and g.get("episode") is not None]
+        if eps:
+            total_episodes_scanned += max(eps)
+
     c137_count = 0
 
     for g in gadgets:
-        s = g.get("season")
-        e = g.get("episode")
-        if s is not None:
-            seasons.add(s)
-        if s is not None and e is not None:
-            episodes.add((s, e))
         if g.get("c137_confirmed"):
             c137_count += 1
         
@@ -85,40 +86,62 @@ def generate_stats_markdown():
         else:
             threat_counts[tid] = 1
 
-    c137_pct = f"%{int((c137_count / total_gadgets) * 100)}" if total_gadgets > 0 else "%0"
+    CAT_NAME_EN = {
+        0: "Handheld Weapon / Device",
+        1: "Cybernetic / Body Implant",
+        2: "Vehicle / Adaptation",
+        3: "Garage / Lab Equipment",
+        4: "Wearable Equipment / Armor / Jetpack",
+        5: "Biological / Genetic / Chemical Invention",
+        6: "Other / Special Invention",
+        7: "Unclassified / Unknown",
+        8: "Ship-Mounted Device"
+    }
+
+    THREAT_NAME_EN = {
+        0: "Harmless / Utility",
+        1: "Indirect Hazard / Tactical",
+        2: "Personal Lethality",
+        3: "Area Destruction",
+        4: "Planetary Threat",
+        5: "Multiversal / Reality Bending",
+        99: "Unclassified / Unknown"
+    }
+
+    c137_pct = f"{int((c137_count / total_gadgets) * 100)}%" if total_gadgets > 0 else "0%"
 
     seasons_str = f"**{len(seasons)}**" if seasons else "**0**"
     if len(seasons) == 1:
-        seasons_str += f" (Sezon {next(iter(seasons)):02d})"
+        seasons_str += f" (Season {next(iter(seasons)):02d})"
     elif len(seasons) > 1:
-        seasons_str += f" (Sezon {min(seasons):02d} - {max(seasons):02d})"
+        seasons_str += f" (Season {min(seasons):02d} - {max(seasons):02d})"
 
-    episodes_str = f"**{len(episodes)}**"
+    episodes_str = f"**{total_episodes_scanned}**"
 
     lines = [
-        "| Metrik | Deger |",
+        "| Metric | Value |",
         "| :--- | :--- |",
-        f"| Toplam Kayitli Icat / Silah | **{total_gadgets}** |",
-        f"| Taranan Sezon Sayisi | {seasons_str} |",
-        f"| Taranan Bölüm Sayisi | {episodes_str} |",
-        f"| C-137 Onayli Icat Orani | **{c137_pct}** ({c137_count}/{total_gadgets}) |",
+        f"| Total Registered Inventions | **{total_gadgets}** |",
+        f"| Seasons Analyzed | {seasons_str} |",
+        f"| Episodes Analyzed | {episodes_str} |",
+        f"| Confirmed C-137 Invention Ratio | **{c137_pct}** ({c137_count}/{total_gadgets}) |",
         "",
-        "### Kategori Dagilimi"
+        "### Category Breakdown"
     ]
 
     for c in categories:
         cid = c["id"]
-        cname = c["name"]
+        cname = CAT_NAME_EN.get(cid, c["name"])
         count = cat_counts.get(cid, 0)
-        lines.append(f"- **{cname}:** {count} adet")
+        lines.append(f"- **{cname}:** {count} items")
 
     lines.append("")
-    lines.append("### Tehdit Seviyesi Dagilimi")
+    lines.append("### Threat Level Breakdown")
     for t in threat_levels:
         tid = t["id"]
-        tname = t["name"]
+        tname = THREAT_NAME_EN.get(tid, t["name"])
         count = threat_counts.get(tid, 0)
-        lines.append(f"- **[{tid}] {tname}:** {count} adet")
+        lines.append(f"- **[{tid}] {tname}:** {count} items")
 
     return "\n".join(lines)
 

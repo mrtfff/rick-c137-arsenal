@@ -495,6 +495,21 @@
     "threat_level": 99
   },
   {
+    "id": "tag#037",
+    "name": "Time-Freezing Device",
+    "season": 1,
+    "episode": 11,
+    "timestamp": "00:00",
+    "category_id": 0,
+    "c137_confirmed": true,
+    "description": "A handheld device that completely freezes time across the universe, allowing the user to move freely while everything else remains stopped.",
+    "images": {
+      "full": "assets/season_01/episode_11/tag#037_full.png",
+      "focus": "assets/season_01/episode_11/tag#037_focus.png"
+    },
+    "threat_level": 99
+  },
+  {
     "id": "tag#034",
     "name": "Holographic Galaxy Projector",
     "season": 1,
@@ -538,21 +553,6 @@
       "focus": "assets/season_01/episode_11/tag#036_focus.png"
     },
     "threat_level": 0
-  },
-  {
-    "id": "tag#037",
-    "name": "Time-Freezing Device",
-    "season": 1,
-    "episode": 11,
-    "timestamp": "00:00",
-    "category_id": 0,
-    "c137_confirmed": true,
-    "description": "A handheld device that completely freezes time across the universe, allowing the user to move freely while everything else remains stopped.",
-    "images": {
-      "full": "assets/season_01/episode_11/tag#037_full.png",
-      "focus": "assets/season_01/episode_11/tag#037_focus.png"
-    },
-    "threat_level": 99
   },
   {
     "id": "tag#038",
@@ -627,6 +627,426 @@
     "images": {
       "full": "assets/season_02/episode_01/tag#042_full.png",
       "focus": "assets/season_02/episode_01/tag#042_focus.png"
+    }
+  },
+  {
+    "id": "tag#043",
+    "name": "Yellow Pipe Wrench",
+    "season": 2,
+    "episode": 1,
+    "timestamp": "15:57",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A standard yellow pipe wrench used by Rick as an improvised weapon against the Time Cop.",
+    "images": {
+      "full": "assets/season_02/episode_01/tag#043_full.png",
+      "focus": "assets/season_02/episode_01/tag#043_focus.png"
+    }
+  },
+  {
+    "id": "tag#044",
+    "name": "Antimatter Gun (official)",
+    "season": 2,
+    "episode": 2,
+    "timestamp": "03:18",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A powerful custom handgun created by Rick that fires antimatter, sold to the assassin Krombopulos Michael.",
+    "images": {
+      "full": "assets/season_02/episode_02/tag#044_full.png",
+      "focus": "assets/season_02/episode_02/tag#044_focus.png"
+    }
+  },
+  {
+    "id": "tag#045",
+    "name": "Green Plasma-Orb Cannon",
+    "season": 2,
+    "episode": 2,
+    "timestamp": "14:32",
+    "category_id": 2,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A ship-mounted cannon that deploys floating green plasma orbs that trap and explode pursuing enemy police ships upon contact.",
+    "images": {
+      "full": "assets/season_02/episode_02/tag#045_full.png",
+      "focus": "assets/season_02/episode_02/tag#045_focus.png"
+    }
+  },
+  {
+    "id": "tag#046",
+    "name": "Blue Laser Minigun",
+    "season": 2,
+    "episode": 2,
+    "timestamp": "15:27",
+    "category_id": 8,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A heavy multi-barreled minigun that fires a relentless stream of blue laser bolts.",
+    "images": {
+      "full": "assets/season_02/episode_02/tag#046_full.png",
+      "focus": "assets/season_02/episode_02/tag#046_focus.png"
+    }
+  },
+  {
+    "id": "tag#047",
+    "name": "Orange Flashlight",
+    "season": 2,
+    "episode": 3,
+    "timestamp": "00:43",
+    "category_id": 0,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "An ordinary orange handheld flashlight used to illuminate dark areas.",
+    "images": {
+      "full": "assets/season_02/episode_03/tag#047_full.png",
+      "focus": "assets/season_02/episode_03/tag#047_focus.png"
+    }
+  },
+  {
+    "id": "tag#048",
+    "name": "Universal Throat Translator",
+    "season": 2,
+    "episode": 3,
+    "timestamp": "16:11",
+    "category_id": 0,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A green handheld device held against the throat that synthesizes the user's voice to speak in any language.",
+    "images": {
+      "full": "assets/season_02/episode_03/tag#048_full.png",
+      "focus": "assets/season_02/episode_03/tag#048_focus.png"
+    }
+  },
+  {
+    "id": "tag#049",
+    "name": "Molecular Metal Fuser",
+    "season": 2,
+    "episode": 3,
+    "timestamp": "20:35",
+    "category_id": 0,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "An electrical device that seamlessly fuses iron and metal objects together without leaving any weld marks.",
+    "images": {
+      "full": "assets/season_02/episode_03/tag#049_full.png",
+      "focus": "assets/season_02/episode_03/tag#049_focus.png"
+    }
+  },
+  {
+    "id": "tag#050",
+    "name": "Frozen Screaming Alien",
+    "season": 2,
+    "episode": 3,
+    "timestamp": "20:40",
+    "category_id": 5,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A creature currently in a frozen state that emits screams once thawed out.",
+    "images": {
+      "full": "assets/season_02/episode_03/tag#050_full.png",
+      "focus": "assets/season_02/episode_03/tag#050_focus.png"
+    }
+  },
+  {
+    "id": "tag#052",
+    "name": "Laser Disintegrator Unit",
+    "season": 2,
+    "episode": 3,
+    "timestamp": "21:02",
+    "category_id": 3,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A laser device consisting of an emitter and receiver that incinerates any living creature touching the beam between them into ash.",
+    "images": {
+      "full": "assets/season_02/episode_03/tag#052_full.png",
+      "focus": "assets/season_02/episode_03/tag#052_focus.png"
+    }
+  },
+  {
+    "id": "tag#051",
+    "name": "Unfreezing Solution",
+    "season": 2,
+    "episode": 3,
+    "timestamp": "22:58",
+    "category_id": 5,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A chemical serum that safely melts ice and thaws frozen creatures without harming them.",
+    "images": {
+      "full": "assets/season_02/episode_03/tag#051_full.png",
+      "focus": "assets/season_02/episode_03/tag#051_focus.png"
+    }
+  },
+  {
+    "id": "tag#056",
+    "name": "Laser Pistol",
+    "season": 2,
+    "episode": 4,
+    "timestamp": "00:00",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A compact handheld pistol that fires high-energy laser bolts.",
+    "images": {
+      "full": "assets/season_02/episode_04/tag#056_full.png",
+      "focus": "assets/season_02/episode_04/tag#056_focus.png"
+    }
+  },
+  {
+    "id": "tag#053",
+    "name": "Single-Button Security Watch",
+    "season": 2,
+    "episode": 4,
+    "timestamp": "02:25",
+    "category_id": 4,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A multi-purpose wristwatch that remotely controls the house's security system, while also firing a laser beam that actually transforms living beings into snakes.",
+    "images": {
+      "full": "assets/season_02/episode_04/tag#053_full.png",
+      "focus": "assets/season_02/episode_04/tag#053_focus.png"
+    }
+  },
+  {
+    "id": "tag#054",
+    "name": "Phase 1 House Security System (official)",
+    "season": 2,
+    "episode": 4,
+    "timestamp": "02:30",
+    "category_id": 3,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A Phase 1 security system that deploys heavy armor and blast shields over doors, windows, and weak entry points without using weapons.",
+    "images": {
+      "full": "assets/season_02/episode_04/tag#054_full.png",
+      "focus": "assets/season_02/episode_04/tag#054_focus.png"
+    }
+  },
+  {
+    "id": "tag#055",
+    "name": "Two-Handed Laser Rifle",
+    "season": 2,
+    "episode": 4,
+    "timestamp": "15:49",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A two-handed laser rifle that fires high-energy laser blasts at targets.",
+    "images": {
+      "full": "assets/season_02/episode_04/tag#055_full.png",
+      "focus": "assets/season_02/episode_04/tag#055_focus.png"
+    }
+  },
+  {
+    "id": "tag#057",
+    "name": "Pump-Action Purple Blaster",
+    "season": 2,
+    "episode": 4,
+    "timestamp": "17:05",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A pump-action shotgun-style rifle that fires powerful blasts of purple laser energy.",
+    "images": {
+      "full": "assets/season_02/episode_04/tag#057_full.png",
+      "focus": "assets/season_02/episode_04/tag#057_focus.png"
+    }
+  },
+  {
+    "id": "tag#058",
+    "name": "Blue Laser Grenade",
+    "season": 2,
+    "episode": 4,
+    "timestamp": "17:05",
+    "category_id": 0,
+    "threat_level": 3,
+    "c137_confirmed": true,
+    "description": "A blue energy grenade that can be strapped to a chest bandolier and explodes with high-powered laser plasma.",
+    "images": {
+      "full": "assets/season_02/episode_04/tag#058_full.png",
+      "focus": "assets/season_02/episode_04/tag#058_focus.png"
+    }
+  },
+  {
+    "id": "tag#059",
+    "name": "Two-Handed Laser Rifle (2)",
+    "season": 2,
+    "episode": 4,
+    "timestamp": "18:01",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A two-handed laser rifle that fires high-energy laser blasts at targets.",
+    "images": {
+      "full": "assets/season_02/episode_04/tag#059_full.png",
+      "focus": "assets/season_02/episode_04/tag#059_focus.png"
+    }
+  },
+  {
+    "id": "tag#060",
+    "name": "Orange Laser Grenade",
+    "season": 2,
+    "episode": 4,
+    "timestamp": "18:29",
+    "category_id": 0,
+    "threat_level": 3,
+    "c137_confirmed": true,
+    "description": "An orange energy grenade that can be strapped to a chest bandolier and explodes with high-powered plasma.",
+    "images": {
+      "full": "assets/season_02/episode_04/tag#060_full.png",
+      "focus": "assets/season_02/episode_04/tag#060_focus.png"
+    }
+  },
+  {
+    "id": "tag#061",
+    "name": "Snake Holster (official)",
+    "season": 2,
+    "episode": 5,
+    "timestamp": "21:18",
+    "category_id": 4,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A leg-mounted holster specially designed to safely carry a live snake.",
+    "images": {
+      "full": "assets/season_02/episode_05/tag#061_full.png",
+      "focus": "assets/season_02/episode_05/tag#061_focus.png"
+    }
+  },
+  {
+    "id": "tag#062",
+    "name": "microverse battery (official)",
+    "season": 2,
+    "episode": 6,
+    "timestamp": "00:34",
+    "category_id": 8,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A car battery containing a miniature universe whose inhabitants generate electrical power for Rick's spaceship.",
+    "images": {
+      "full": "assets/season_02/episode_06/tag#062_full.png",
+      "focus": "assets/season_02/episode_06/tag#062_focus.png"
+    }
+  },
+  {
+    "id": "tag#063",
+    "name": "Laser Dicing Grid",
+    "season": 2,
+    "episode": 6,
+    "timestamp": "01:17",
+    "category_id": 8,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A ship-mounted laser security system that scans targets and slices them into precise flesh cubes.",
+    "images": {
+      "full": "assets/season_02/episode_06/tag#063_full.png",
+      "focus": "assets/season_02/episode_06/tag#063_focus.png"
+    }
+  },
+  {
+    "id": "tag#064",
+    "name": "Paralyzing Spine Laser",
+    "season": 2,
+    "episode": 6,
+    "timestamp": "01:30",
+    "category_id": 8,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "\"A ship-mounted laser device that fires a red beam into a target's spine, permanently paralyzing them below the waist.",
+    "images": {
+      "full": "assets/season_02/episode_06/tag#064_full.png",
+      "focus": "assets/season_02/episode_06/tag#064_focus.png"
+    }
+  },
+  {
+    "id": "tag#065",
+    "name": "Ship-mounted laser weapons",
+    "season": 2,
+    "episode": 6,
+    "timestamp": "08:28",
+    "category_id": 8,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A collection of laser cannons integrated into the spaceship's hull used for ship defense.",
+    "images": {
+      "full": "assets/season_02/episode_06/tag#065_full.png",
+      "focus": "assets/season_02/episode_06/tag#065_focus.png"
+    }
+  },
+  {
+    "id": "tag#066",
+    "name": "Psychological Attack Gestation Tube",
+    "season": 2,
+    "episode": 6,
+    "timestamp": "09:02",
+    "category_id": 8,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A ship-mounted incubation tube that grows melting clones of loved ones to inflict emotional trauma without physical damage.",
+    "images": {
+      "full": "assets/season_02/episode_06/tag#066_full.png",
+      "focus": "assets/season_02/episode_06/tag#066_focus.png"
+    }
+  },
+  {
+    "id": "tag#067",
+    "name": "Ship External Loudspeaker",
+    "season": 2,
+    "episode": 6,
+    "timestamp": "09:34",
+    "category_id": 8,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "\"A large external loudspeaker mounted on the spaceship to project audio to the outside environment.",
+    "images": {
+      "full": "assets/season_02/episode_06/tag#067_full.png",
+      "focus": "assets/season_02/episode_06/tag#067_focus.png"
+    }
+  },
+  {
+    "id": "tag#068",
+    "name": "Teenyverse Wooden Multi-Crossbow",
+    "season": 2,
+    "episode": 6,
+    "timestamp": "13:00",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A primitive wooden multi-crossbow built from alien wood and vines while trapped inside the Teenyverse.",
+    "images": {
+      "full": "assets/season_02/episode_06/tag#068_full.png",
+      "focus": "assets/season_02/episode_06/tag#068_focus.png"
+    }
+  },
+  {
+    "id": "tag#069",
+    "name": "Wooden Mech Suit",
+    "season": 2,
+    "episode": 6,
+    "timestamp": "14:27",
+    "category_id": 4,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A mech suit made of wood.",
+    "images": {
+      "full": "assets/season_02/episode_06/tag#069_full.png",
+      "focus": "assets/season_02/episode_06/tag#069_focus.png"
+    }
+  },
+  {
+    "id": "tag#070",
+    "name": "Jet-Powered Wall-Riding Splitboard",
+    "season": 2,
+    "episode": 6,
+    "timestamp": "17:11",
+    "category_id": 4,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A pair of shoes that transform into jet-powered splitboards to ride on walls and ceilings.",
+    "images": {
+      "full": "assets/season_02/episode_06/tag#070_full.png",
+      "focus": "assets/season_02/episode_06/tag#070_focus.png"
     }
   }
 ]

@@ -1108,5 +1108,155 @@
       "full": "assets/season_02/episode_07/tag#074_full.png",
       "focus": "assets/season_02/episode_07/tag#074_focus.png"
     }
+  },
+  {
+    "id": "tag#075",
+    "name": "Inter Dimensional Cable 2",
+    "season": 2,
+    "episode": 8,
+    "timestamp": "01:03",
+    "category_id": 0,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A modified set-top cable receiver that intercepts television broadcasts from infinite realities across the multiverse.",
+    "images": {
+      "full": "assets/season_02/episode_08/tag#075_full.png",
+      "focus": "assets/season_02/episode_08/tag#075_focus.png"
+    }
+  },
+  {
+    "id": "tag#076",
+    "name": "Robotic Beetle Bomb",
+    "season": 2,
+    "episode": 9,
+    "timestamp": "08:03",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A tiny robotic bug bomb carried in Rick's coat pocket that latches onto targets and disintegrates them into electric dust.",
+    "images": {
+      "full": "assets/season_02/episode_09/tag#076_full.png",
+      "focus": "assets/season_02/episode_09/tag#076_focus.png"
+    }
+  },
+  {
+    "id": "tag#077",
+    "name": "Intergalactic Space Phone",
+    "season": 2,
+    "episode": 9,
+    "timestamp": "08:34",
+    "category_id": 0,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "An intergalactic cell phone given to Summer that enables long-distance communication across lightyears and dimensions.",
+    "images": {
+      "full": "assets/season_02/episode_09/tag#077_full.png",
+      "focus": "assets/season_02/episode_09/tag#077_focus.png"
+    }
+  },
+  {
+    "id": "tag#078",
+    "name": "Local Purge Shotgun",
+    "season": 2,
+    "episode": 9,
+    "timestamp": "09:10",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A rusty, low-tech alien shotgun found on the Purge planet and used by Rick after losing his high-tech weapons.",
+    "images": {
+      "full": "assets/season_02/episode_09/tag#078_full.png",
+      "focus": "assets/season_02/episode_09/tag#078_focus.png"
+    }
+  },
+  {
+    "id": "tag#079",
+    "name": "Red Purge-Suit Launch Box",
+    "season": 2,
+    "episode": 9,
+    "timestamp": "11:53",
+    "category_id": 3,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A passcode-locked red garage box (Password: 7-7-1-9-8-3-6-4-2-1-1-2) that launches power suits to the beacon receiver on the Purge planet.",
+    "images": {
+      "full": "assets/season_02/episode_09/tag#079_full.png",
+      "focus": "assets/season_02/episode_09/tag#079_focus.png"
+    }
+  },
+  {
+    "id": "tag#080",
+    "name": "Makeshift Purge Beacon Receiver",
+    "season": 2,
+    "episode": 9,
+    "timestamp": "12:14",
+    "category_id": 6,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A makeshift signal receiver built by Rick from scrap items in a lighthouse to guide the Purge Suit rocket to his location.",
+    "images": {
+      "full": "assets/season_02/episode_09/tag#080_full.png",
+      "focus": "assets/season_02/episode_09/tag#080_focus.png"
+    }
+  },
+  {
+    "id": "tag#081",
+    "name": "Purge Suit (official)",
+    "season": 2,
+    "episode": 9,
+    "timestamp": "15:21",
+    "category_id": 4,
+    "threat_level": 3,
+    "c137_confirmed": true,
+    "description": "A high-tech armored mech suit equipped with heavy weaponry, energy cannons, and thrusters for battlefield dominance.",
+    "images": {
+      "full": "assets/season_02/episode_09/tag#081_full.png",
+      "focus": "assets/season_02/episode_09/tag#081_focus.png"
+    }
+  },
+  {
+    "id": "tag#082",
+    "name": "Suit-Mounted Shock Net",
+    "season": 2,
+    "episode": 9,
+    "timestamp": "16:59",
+    "category_id": 7,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A non-lethal electrified net deployed from the suit to shock and immobilize targets without causing lethal harm.",
+    "images": {
+      "full": "assets/season_02/episode_09/tag#082_full.png",
+      "focus": "assets/season_02/episode_09/tag#082_focus.png"
+    }
+  },
+  {
+    "id": "tag#083",
+    "name": "Suit-Mounted Circular Saw",
+    "season": 2,
+    "episode": 9,
+    "timestamp": "18:04",
+    "category_id": 4,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A high-speed rotating saw blade integrated into the Purge Suit that replaces the hand for close-quarters slicing.",
+    "images": {
+      "full": "assets/season_02/episode_09/tag#083_full.png",
+      "focus": "assets/season_02/episode_09/tag#083_focus.png"
+    }
+  },
+  {
+    "id": "tag#084",
+    "name": "Suit-Mounted Missile Launcher",
+    "season": 2,
+    "episode": 9,
+    "timestamp": "18:13",
+    "category_id": 4,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A missile launcher integrated into the Purge Suit's arm that fires high-explosive missiles.",
+    "images": {
+      "full": "assets/season_02/episode_09/tag#084_full.png",
+      "focus": "assets/season_02/episode_09/tag#084_focus.png"
+    }
   }
 ]

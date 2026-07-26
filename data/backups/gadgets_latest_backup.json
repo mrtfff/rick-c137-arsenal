@@ -1048,5 +1048,50 @@
       "full": "assets/season_02/episode_06/tag#070_full.png",
       "focus": "assets/season_02/episode_06/tag#070_focus.png"
     }
+  },
+  {
+    "id": "tag#071",
+    "name": "Car Morty (official)",
+    "season": 2,
+    "episode": 6,
+    "timestamp": "22:07",
+    "category_id": 2,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A nanobot transformation implanted inside Morty's body that allows him to turn into a car.",
+    "images": {
+      "full": "assets/season_02/episode_06/tag#071_full.png",
+      "focus": "assets/season_02/episode_06/tag#071_focus.png"
+    }
+  },
+  {
+    "id": "tag#072",
+    "name": "Passenger Pure Button",
+    "season": 2,
+    "episode": 7,
+    "timestamp": "02:51",
+    "category_id": 8,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A dashboard function on Rick's spaceship labeled 'Passenger Purge' that ejects passengers out of the ship.",
+    "images": {
+      "full": "assets/season_02/episode_07/tag#072_full.png",
+      "focus": "assets/season_02/episode_07/tag#072_focus.png"
+    }
+  },
+  {
+    "id": "tag#073",
+    "name": "Clone Vat (official)",
+    "season": 2,
+    "episode": 7,
+    "timestamp": "05:30",
+    "category_id": 3,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A fluid-filled vat used by Rick to preserve and grow his cloned bodies for mind transfer.",
+    "images": {
+      "full": "assets/season_02/episode_07/tag#073_full.png",
+      "focus": "assets/season_02/episode_07/tag#073_focus.png"
+    }
   }
 ]

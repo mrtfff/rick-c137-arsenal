@@ -3,13 +3,14 @@ import json
 import sys
 import shutil
 import time
+import signal
 import subprocess
 import threading
 import tkinter as tk
 from tkinter import messagebox, ttk
 from PIL import Image, ImageTk
 
-# Windows DPI Awareness (Ekran Ölçekleme Kaymalarını Önler)
+# Windows DPI Awareness (Prevents Display Scaling Offset)
 if sys.platform == "win32":
     try:
         import ctypes
@@ -48,7 +49,7 @@ def parse_timestamp_to_seconds(ts_str):
 
 
 def gadget_sort_key(gadget):
-    """Aletleri Sezon -> Bölüm -> Zaman Kodu -> ID sırasına göre dizer."""
+    """Sorts gadgets chronologically: Season -> Episode -> Timestamp -> ID."""
     season = gadget.get("season", 0) or 0
     episode = gadget.get("episode", 0) or 0
     ts_seconds = parse_timestamp_to_seconds(gadget.get("timestamp"))
@@ -56,8 +57,8 @@ def gadget_sort_key(gadget):
 
 
 class ImageViewerModal(tk.Toplevel):
-    """Büyütülmüş resim gösterici modal penceresi."""
-    def __init__(self, parent, image_path, title_text="Görsel Detayı"):
+    """Enlarged Image Inspector Modal Window."""
+    def __init__(self, parent, image_path, title_text="Image Details"):
         super().__init__(parent)
         self.title(title_text)
         self.geometry("900x700")
@@ -76,9 +77,9 @@ class ImageViewerModal(tk.Toplevel):
                 self.bind("<Configure>", self.on_resize)
                 self.bind("<Escape>", lambda e: self.destroy())
             except Exception as e:
-                self.canvas.create_text(450, 350, text=f"Görsel açılamadı:\n{e}", fill="white", font=("Arial", 14))
+                self.canvas.create_text(450, 350, text=f"Failed to open image:\n{e}", fill="white", font=("Arial", 14))
         else:
-            self.canvas.create_text(450, 350, text="Görsel dosyası bulunamadı!", fill="red", font=("Arial", 14, "bold"))
+            self.canvas.create_text(450, 350, text="Image file not found!", fill="red", font=("Arial", 14, "bold"))
 
     def on_resize(self, event):
         if not self.pil_img:
@@ -104,7 +105,7 @@ class ImageViewerModal(tk.Toplevel):
 class GadgetViewerApp(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("Rick C-137 Gadget Görüntüleyici ve Düzenleyici")
+        self.title("Rick C-137 Gadget Viewer & Editor")
         self.geometry("1100x750")
         self.minsize(950, 600)
 
@@ -130,6 +131,23 @@ class GadgetViewerApp(tk.Tk):
         # AltGr shortcut to jump to next gadget
         self.bind_all("<Alt_R>", self.select_next_gadget)
         self.bind_all("<ISO_Level3_Shift>", self.select_next_gadget)
+
+        # Signal Handlers for Ctrl+C
+        self.after(500, self.check_signal)
+        self.setup_signal_handlers()
+
+    def check_signal(self):
+        self.after(500, self.check_signal)
+
+    def setup_signal_handlers(self):
+        def handle_sigint(sig, frame):
+            print("\n[LOG] Ctrl+C detected. Exiting application safely...", flush=True)
+            self.after(0, self.on_closing)
+
+        try:
+            signal.signal(signal.SIGINT, handle_sigint)
+        except Exception:
+            pass
 
     def load_categories(self):
         if not os.path.exists(CATEGORIES_FILE):
@@ -157,7 +175,7 @@ class GadgetViewerApp(tk.Tk):
                 data = json.load(f)
                 return data if isinstance(data, list) else []
         except Exception as e:
-            messagebox.showerror("Hata", f"gadgets.json okunamadı: {e}")
+            messagebox.showerror("Error", f"Failed to read gadgets.json: {e}")
             return []
 
     def reload_data(self):
@@ -166,11 +184,11 @@ class GadgetViewerApp(tk.Tk):
         self.apply_filter()
 
     def update_combobox_values(self):
-        cat_names = ["Hepsi"] + [f"[{c['id']}] {c['name']}" for c in self.categories_data]
+        cat_names = ["All"] + [f"[{c['id']}] {c['name']}" for c in self.categories_data]
         self.filter_cat_combobox["values"] = cat_names
         self.filter_cat_combobox.current(0)
 
-        threat_names = ["Hepsi"] + [f"[{t['id']}] {t['name']}" for t in self.threat_levels_data]
+        threat_names = ["All"] + [f"[{t['id']}] {t['name']}" for t in self.threat_levels_data]
         self.filter_threat_combobox["values"] = threat_names
         self.filter_threat_combobox.current(0)
 
@@ -190,20 +208,20 @@ class GadgetViewerApp(tk.Tk):
         main_paned.add(left_frame, weight=1)
 
         # Filter Frame
-        filter_frame = ttk.LabelFrame(left_frame, text=" 🔍 Arama ve Filtreleme ", padding=5)
+        filter_frame = ttk.LabelFrame(left_frame, text=" Search & Filter ", padding=5)
         filter_frame.pack(fill="x", padx=5, pady=5)
 
-        ttk.Label(filter_frame, text="Arama:").grid(row=0, column=0, sticky="w", padx=2, pady=2)
+        ttk.Label(filter_frame, text="Search:").grid(row=0, column=0, sticky="w", padx=2, pady=2)
         self.search_entry = ttk.Entry(filter_frame)
         self.search_entry.grid(row=0, column=1, sticky="ew", padx=2, pady=2)
         self.search_entry.bind("<KeyRelease>", lambda e: self.apply_filter())
 
-        ttk.Label(filter_frame, text="Kategori:").grid(row=1, column=0, sticky="w", padx=2, pady=2)
+        ttk.Label(filter_frame, text="Category:").grid(row=1, column=0, sticky="w", padx=2, pady=2)
         self.filter_cat_combobox = ttk.Combobox(filter_frame, state="readonly")
         self.filter_cat_combobox.grid(row=1, column=1, sticky="ew", padx=2, pady=2)
         self.filter_cat_combobox.bind("<<ComboboxSelected>>", lambda e: self.apply_filter())
 
-        ttk.Label(filter_frame, text="Tehdit Seviyesi:").grid(row=2, column=0, sticky="w", padx=2, pady=2)
+        ttk.Label(filter_frame, text="Threat Level:").grid(row=2, column=0, sticky="w", padx=2, pady=2)
         self.filter_threat_combobox = ttk.Combobox(filter_frame, state="readonly")
         self.filter_threat_combobox.grid(row=2, column=1, sticky="ew", padx=2, pady=2)
         self.filter_threat_combobox.bind("<<ComboboxSelected>>", lambda e: self.apply_filter())
@@ -217,8 +235,8 @@ class GadgetViewerApp(tk.Tk):
         columns = ("id", "code", "name")
         self.tree = ttk.Treeview(tree_frame, columns=columns, show="headings", selectmode="browse")
         self.tree.heading("id", text="ID")
-        self.tree.heading("code", text="Sezon/Bölüm")
-        self.tree.heading("name", text="Alet İsmi")
+        self.tree.heading("code", text="Season/Ep")
+        self.tree.heading("name", text="Gadget Name")
 
         self.tree.column("id", width=65, anchor="center")
         self.tree.column("code", width=80, anchor="center")
@@ -236,10 +254,10 @@ class GadgetViewerApp(tk.Tk):
         left_bottom_frame = ttk.Frame(left_frame)
         left_bottom_frame.pack(fill="x", padx=5, pady=5)
         
-        btn_refresh = ttk.Button(left_bottom_frame, text="🔄 Yenile", command=self.reload_data)
+        btn_refresh = ttk.Button(left_bottom_frame, text="Refresh", command=self.reload_data)
         btn_refresh.pack(side="left")
 
-        self.count_label = ttk.Label(left_bottom_frame, text="Toplam: 0 alet")
+        self.count_label = ttk.Label(left_bottom_frame, text="Total: 0 items")
         self.count_label.pack(side="right")
 
         # ---------------- RIGHT PANEL ----------------
@@ -247,7 +265,7 @@ class GadgetViewerApp(tk.Tk):
         main_paned.add(right_frame, weight=3)
 
         # Image Previews Frame
-        img_frame = ttk.LabelFrame(right_frame, text=" 🖼️ Görsel Önizleme (Büyütmek İçin Tıklayın) ", padding=5)
+        img_frame = ttk.LabelFrame(right_frame, text=" Image Preview (Click to Enlarge) ", padding=5)
         img_frame.pack(fill="both", expand=True, padx=5, pady=5)
 
         img_frame.columnconfigure(0, weight=1)
@@ -258,22 +276,22 @@ class GadgetViewerApp(tk.Tk):
         full_box = ttk.Frame(img_frame)
         full_box.grid(row=0, column=0, sticky="nsew", padx=5, pady=2)
 
-        ttk.Label(full_box, text="1/2: Tam Sahne", font=("Arial", 9, "bold")).pack(anchor="w")
-        self.full_img_label = tk.Label(full_box, text="Görsel Yok", bg="#2b2b2b", fg="white", cursor="hand2")
+        ttk.Label(full_box, text="1/2: Full Scene", font=("Arial", 9, "bold")).pack(anchor="w")
+        self.full_img_label = tk.Label(full_box, text="No Image", bg="#2b2b2b", fg="white", cursor="hand2")
         self.full_img_label.pack(fill="both", expand=True, pady=2)
-        self.full_img_label.bind("<Button-1>", lambda e: self.open_modal(self.current_full_path, "Tam Sahne"))
+        self.full_img_label.bind("<Button-1>", lambda e: self.open_modal(self.current_full_path, "Full Scene"))
 
         # Focus Gadget Image Box
         focus_box = ttk.Frame(img_frame)
         focus_box.grid(row=0, column=1, sticky="nsew", padx=5, pady=2)
 
-        ttk.Label(focus_box, text="2/2: Alet Odağı", font=("Arial", 9, "bold")).pack(anchor="w")
-        self.focus_img_label = tk.Label(focus_box, text="Görsel Yok", bg="#2b2b2b", fg="white", cursor="hand2")
+        ttk.Label(focus_box, text="2/2: Gadget Focus", font=("Arial", 9, "bold")).pack(anchor="w")
+        self.focus_img_label = tk.Label(focus_box, text="No Image", bg="#2b2b2b", fg="white", cursor="hand2")
         self.focus_img_label.pack(fill="both", expand=True, pady=2)
-        self.focus_img_label.bind("<Button-1>", lambda e: self.open_modal(self.current_focus_path, "Alet Odağı"))
+        self.focus_img_label.bind("<Button-1>", lambda e: self.open_modal(self.current_focus_path, "Gadget Focus"))
 
         # Edit Form Frame
-        form_frame = ttk.LabelFrame(right_frame, text=" ✏️ Gadget Bilgilerini Düzenle ", padding=10)
+        form_frame = ttk.LabelFrame(right_frame, text=" Edit Gadget Details ", padding=10)
         form_frame.pack(fill="x", padx=5, pady=5)
 
         form_frame.columnconfigure(1, weight=1)
@@ -285,7 +303,7 @@ class GadgetViewerApp(tk.Tk):
         ttk.Label(form_frame, textvariable=self.id_var, font=("Arial", 10, "bold"), foreground="#2196F3").grid(row=row, column=1, sticky="w", pady=3)
 
         row += 1
-        ttk.Label(form_frame, text="Sezon / Bölüm / Zaman:").grid(row=row, column=0, sticky="w", pady=3)
+        ttk.Label(form_frame, text="Season / Episode / Time:").grid(row=row, column=0, sticky="w", pady=3)
         se_frame = ttk.Frame(form_frame)
         se_frame.grid(row=row, column=1, sticky="w", pady=3)
 
@@ -297,19 +315,19 @@ class GadgetViewerApp(tk.Tk):
         self.episode_spin = ttk.Spinbox(se_frame, from_=1, to=999, width=4)
         self.episode_spin.pack(side="left", padx=(2, 8))
 
-        ttk.Label(se_frame, text="Zaman (MM:SS):").pack(side="left")
+        ttk.Label(se_frame, text="Timestamp (MM:SS):").pack(side="left")
         self.time_entry = ttk.Entry(se_frame, width=8)
         self.time_entry.pack(side="left", padx=(2, 2))
 
         # Name
         row += 1
-        ttk.Label(form_frame, text="Alet İsmi:").grid(row=row, column=0, sticky="w", pady=3)
+        ttk.Label(form_frame, text="Gadget Name:").grid(row=row, column=0, sticky="w", pady=3)
         self.name_entry = ttk.Entry(form_frame)
         self.name_entry.grid(row=row, column=1, sticky="ew", pady=3)
 
         # Category
         row += 1
-        ttk.Label(form_frame, text="Kategori:").grid(row=row, column=0, sticky="w", pady=3)
+        ttk.Label(form_frame, text="Category:").grid(row=row, column=0, sticky="w", pady=3)
         self.cat_combobox = ttk.Combobox(form_frame, state="readonly")
         self.cat_combobox.grid(row=row, column=1, sticky="ew", pady=3)
         self.cat_combobox.bind("<Key>", self.on_cat_key_press)
@@ -317,7 +335,7 @@ class GadgetViewerApp(tk.Tk):
 
         # Threat Level
         row += 1
-        ttk.Label(form_frame, text="Tehdit Seviyesi:").grid(row=row, column=0, sticky="w", pady=3)
+        ttk.Label(form_frame, text="Threat Level:").grid(row=row, column=0, sticky="w", pady=3)
         self.threat_combobox = ttk.Combobox(form_frame, state="readonly")
         self.threat_combobox.grid(row=row, column=1, sticky="ew", pady=3)
         self.threat_combobox.bind("<Key>", self.on_threat_key_press)
@@ -326,30 +344,30 @@ class GadgetViewerApp(tk.Tk):
         # C-137 Checkbox
         row += 1
         self.c137_var = tk.BooleanVar(value=True)
-        self.c137_check = ttk.Checkbutton(form_frame, text="C-137 Rick İcadı / Kullanımı Onaylı", variable=self.c137_var)
+        self.c137_check = ttk.Checkbutton(form_frame, text="Confirmed C-137 Rick Invention / Usage", variable=self.c137_var)
         self.c137_check.grid(row=row, column=1, sticky="w", pady=3)
 
         # Description
         row += 1
-        ttk.Label(form_frame, text="Açıklama:").grid(row=row, column=0, sticky="nw", pady=3)
-        self.desc_text = tk.Text(form_frame, height=3, wrap="word", font=("Segoe UI", 9))
+        ttk.Label(form_frame, text="Description:").grid(row=row, column=0, sticky="nw", pady=3)
+        self.desc_text = tk.Text(form_frame, height=3, wrap="word", font=("Arial", 9))
         self.desc_text.grid(row=row, column=1, sticky="ew", pady=3)
 
         # Action Buttons Frame
         btn_frame = ttk.Frame(right_frame)
         btn_frame.pack(fill="x", padx=5, pady=5)
 
-        self.btn_save = tk.Button(btn_frame, text="💾 DEĞİŞİKLİKLERİ KAYDET", bg="#4CAF50", fg="white", font=("Arial", 10, "bold"), command=self.save_changes)
+        self.btn_save = tk.Button(btn_frame, text="SAVE CHANGES", bg="#4CAF50", fg="white", font=("Arial", 10, "bold"), command=self.save_changes)
         self.btn_save.pack(side="left", fill="x", expand=True, padx=2)
 
-        self.btn_delete = tk.Button(btn_frame, text="🗑️ KAYDI SİL", bg="#F44336", fg="white", font=("Arial", 10, "bold"), command=self.delete_gadget)
+        self.btn_delete = tk.Button(btn_frame, text="DELETE GADGET", bg="#F44336", fg="white", font=("Arial", 10, "bold"), command=self.delete_gadget)
         self.btn_delete.pack(side="left", padx=2)
 
-        self.btn_git = tk.Button(btn_frame, text="🚀 GitHub'a Push Et", bg="#9C27B0", fg="white", font=("Arial", 10, "bold"), command=self.git_push)
+        self.btn_git = tk.Button(btn_frame, text="Push to GitHub", bg="#9C27B0", fg="white", font=("Arial", 10, "bold"), command=self.git_push)
         self.btn_git.pack(side="right", padx=2)
 
         # Status Bar
-        self.status_bar = ttk.Label(self, text="Hazır", relief="sunken", anchor="w")
+        self.status_bar = ttk.Label(self, text="Ready", relief="sunken", anchor="w")
         self.status_bar.pack(side="bottom", fill="x")
 
     def update_status(self, message, color="black"):
@@ -361,14 +379,14 @@ class GadgetViewerApp(tk.Tk):
         selected_threat_str = self.filter_threat_combobox.get()
         
         target_cat_id = None
-        if selected_cat_str and selected_cat_str != "Hepsi":
+        if selected_cat_str and selected_cat_str != "All":
             try:
                 target_cat_id = int(selected_cat_str.split("]")[0].replace("[", ""))
             except ValueError:
                 target_cat_id = None
 
         target_threat_id = None
-        if selected_threat_str and selected_threat_str != "Hepsi":
+        if selected_threat_str and selected_threat_str != "All":
             try:
                 target_threat_id = int(selected_threat_str.split("]")[0].replace("[", ""))
             except ValueError:
@@ -384,7 +402,7 @@ class GadgetViewerApp(tk.Tk):
         count = 0
         for g in sorted_gadgets:
             gid = g.get("id", "")
-            gname = g.get("name") or "(İsimsiz)"
+            gname = g.get("name") or "(Unnamed)"
             s = g.get("season", 0)
             e = g.get("episode", 0)
             code = f"S{s:02d}E{e:02d}"
@@ -409,7 +427,7 @@ class GadgetViewerApp(tk.Tk):
             self.tree.insert("", "end", iid=gid, values=(gid, code, gname))
             count += 1
 
-        self.count_label.config(text=f"Gösterilen: {count} / {len(self.gadgets_data)}")
+        self.count_label.config(text=f"Showing: {count} / {len(self.gadgets_data)}")
 
         # Select first item if available and none selected
         children = self.tree.get_children()
@@ -512,21 +530,17 @@ class GadgetViewerApp(tk.Tk):
             self.unsaved_changes.add(self.selected_gadget_id)
 
             code = f"S{season:02d}E{episode:02d}"
-            gname = name or "(İsimsiz)"
+            gname = name or "(Unnamed)"
             if self.tree.exists(self.selected_gadget_id):
                 self.tree.item(self.selected_gadget_id, values=(self.selected_gadget_id, code, gname))
 
     def select_next_gadget(self, event=None):
-        """AltGr tuşuna basıldığında listedeki bir sonraki alete geçer."""
+        """Advances selection to the next gadget in the list when AltGr is pressed."""
         focused = self.focus_get()
-        # Sadece serbest metin girilen alanlarda (Entry/Text) Türkçe karakter kombinasyonları için AltGr serbest bırakılır.
-        # Combobox kutularında AltGr aktif çalışır.
         if isinstance(focused, (tk.Entry, tk.Text, ttk.Entry, ttk.Spinbox)) and not isinstance(focused, ttk.Combobox):
             return
 
         was_threat_focused = (focused == self.threat_combobox)
-
-        # Mevcut form verisini hafızaya al
         self.save_current_form_to_memory()
 
         children = self.tree.get_children()
@@ -549,7 +563,6 @@ class GadgetViewerApp(tk.Tk):
             self.tree.focus(next_id)
 
     def on_gadget_selected(self, event):
-        # Auto-stage pending changes in active form before loading new selection
         self.save_current_form_to_memory()
 
         selected = self.tree.selection()
@@ -605,11 +618,11 @@ class GadgetViewerApp(tk.Tk):
         self.load_thumbnail(self.current_full_path, self.full_img_label, "full")
         self.load_thumbnail(self.current_focus_path, self.focus_img_label, "focus")
 
-        self.update_status(f"Seçildi: {gid} ({gadget.get('name') or 'İsimsiz'})", "blue")
+        self.update_status(f"Selected: {gid} ({gadget.get('name') or 'Unnamed'})", "blue")
 
     def load_thumbnail(self, path, label_widget, img_type):
         if not path or not os.path.exists(path):
-            label_widget.config(image="", text="Görsel Bulunamadı", bg="#333333", fg="#ff6b6b")
+            label_widget.config(image="", text="Image Not Found", bg="#333333", fg="#ff6b6b")
             return
 
         try:
@@ -624,11 +637,11 @@ class GadgetViewerApp(tk.Tk):
 
             label_widget.config(image=photo, text="", bg="#1e1e1e")
         except Exception as e:
-            label_widget.config(image="", text=f"Hata: {e}", bg="#333333", fg="#ff6b6b")
+            label_widget.config(image="", text=f"Error: {e}", bg="#333333", fg="#ff6b6b")
 
     def open_modal(self, image_path, title_suffix):
         if not image_path or not os.path.exists(image_path):
-            messagebox.showwarning("Uyarı", "Görsel dosyası bulunamadı!")
+            messagebox.showwarning("Warning", "Image file not found!")
             return
         gid = self.selected_gadget_id or ""
         ImageViewerModal(self, image_path, f"{gid} - {title_suffix}")
@@ -641,20 +654,18 @@ class GadgetViewerApp(tk.Tk):
         self.time_entry.delete(0, tk.END)
         self.name_entry.delete(0, tk.END)
         self.desc_text.delete("1.0", tk.END)
-        self.full_img_label.config(image="", text="Görsel Seçilmedi", bg="#2b2b2b", fg="white")
-        self.focus_img_label.config(image="", text="Görsel Seçilmedi", bg="#2b2b2b", fg="white")
+        self.full_img_label.config(image="", text="No Image Selected", bg="#2b2b2b", fg="white")
+        self.focus_img_label.config(image="", text="No Image Selected", bg="#2b2b2b", fg="white")
         self.current_full_path = None
         self.current_focus_path = None
 
     def save_changes(self):
-        # Stage current active form inputs
         self.save_current_form_to_memory()
 
         if not self.unsaved_changes and not self.selected_gadget_id:
-            messagebox.showwarning("Uyarı", "Lütfen önce düzenlenecek bir gadget seçin!")
+            messagebox.showwarning("Warning", "Please select a gadget to edit first!")
             return
 
-        # Backup & Save to File
         if os.path.exists(GADGETS_FILE):
             try:
                 os.makedirs(BACKUP_DIR, exist_ok=True)
@@ -664,7 +675,6 @@ class GadgetViewerApp(tk.Tk):
                 pass
 
         try:
-            # Chronological sort before writing to file
             self.gadgets_data.sort(key=gadget_sort_key)
 
             with open(GADGETS_FILE, "w", encoding="utf-8") as f:
@@ -674,42 +684,46 @@ class GadgetViewerApp(tk.Tk):
             self.unsaved_changes.clear()
 
             tag_list_str = ", ".join(saved_tags)
-            self.update_status(f"✅ Değişiklikler kaydedildi: {tag_list_str}", "green")
+            self.update_status(f"Changes saved: {tag_list_str}", "green")
             
-            # Automatically update README statistics
             try:
                 import update_readme
                 update_readme.update_readme()
             except Exception:
                 pass
 
-            messagebox.showinfo("Başarılı", f"Veritabanına başarıyla kaydedilen aletler:\n{tag_list_str}")
+            messagebox.showinfo("Success", f"Successfully saved gadgets to database:\n{tag_list_str}")
         except Exception as err:
-            messagebox.showerror("Kaydetme Hatası", f"Dosya kaydedilemedi: {err}")
+            messagebox.showerror("Save Error", f"Failed to save file: {err}")
 
     def on_closing(self):
+        print("[LOG] Closing Arsenal Viewer cleanly...", flush=True)
         self.save_current_form_to_memory()
         if self.unsaved_changes:
             items_lines = []
             for gid in sorted(self.unsaved_changes):
                 g = next((item for item in self.gadgets_data if item["id"] == gid), None)
-                g_name = (g.get("name") if g else None) or "İsimsiz"
+                g_name = (g.get("name") if g else None) or "Unnamed"
                 items_lines.append(f"• {gid} ({g_name})")
             
             msg = (
-                "Aşağıdaki alet(ler) üzerinde değişiklik yaptınız fakat henüz kaydetmediniz:\n\n"
+                "You have unsaved changes on the following gadget(s):\n\n"
                 + "\n".join(items_lines) +
-                "\n\nKaydetmeden çıkmak istediğinize emin misiniz?"
+                "\n\nAre you sure you want to exit without saving?"
             )
-            confirm = messagebox.askyesno("Kaydedilmemiş Değişiklikler Var!", msg, icon="warning")
+            confirm = messagebox.askyesno("Unsaved Changes", msg, icon="warning")
             if not confirm:
                 return
 
-        self.destroy()
+        try:
+            self.destroy()
+        except Exception:
+            pass
+        sys.exit(0)
 
     def delete_gadget(self):
         if not self.selected_gadget_id:
-            messagebox.showwarning("Uyarı", "Lütfen önce silinecek bir gadget seçin!")
+            messagebox.showwarning("Warning", "Please select a gadget to delete first!")
             return
 
         gid = self.selected_gadget_id
@@ -718,16 +732,15 @@ class GadgetViewerApp(tk.Tk):
             return
 
         confirm = messagebox.askyesno(
-            "Kaydı Sil",
-            f"'{gid}' ({gadget.get('name') or 'İsimsiz'}) kaydını veritabanından silmek istediğinize emin misiniz?"
+            "Delete Record",
+            f"Are you sure you want to delete '{gid}' ({gadget.get('name') or 'Unnamed'}) from the database?"
         )
         if not confirm:
             return
 
-        # Ask if image files should also be deleted
         delete_files = messagebox.askyesno(
-            "Görselleri de Sil",
-            f"Bu alete ait ekran görüntüsü dosyalarını da diskten silmek istiyor musunuz?"
+            "Delete Images",
+            "Do you also want to delete the image files associated with this gadget from disk?"
         )
 
         if delete_files:
@@ -740,12 +753,10 @@ class GadgetViewerApp(tk.Tk):
                         try:
                             os.remove(abs_path)
                         except Exception as e:
-                            print(f"Görsel silinemedi {abs_path}: {e}")
+                            print(f"Failed to delete image {abs_path}: {e}")
 
-        # Remove from list
         self.gadgets_data = [g for g in self.gadgets_data if g["id"] != gid]
 
-        # Backup & Save
         if os.path.exists(GADGETS_FILE):
             try:
                 os.makedirs(BACKUP_DIR, exist_ok=True)
@@ -758,21 +769,33 @@ class GadgetViewerApp(tk.Tk):
             with open(GADGETS_FILE, "w", encoding="utf-8") as f:
                 json.dump(self.gadgets_data, f, ensure_ascii=False, indent=2)
 
-            # Automatically update README statistics
             try:
                 import update_readme
                 update_readme.update_readme()
             except Exception:
                 pass
 
-            self.update_status(f"🗑️ {gid} silindi.", "red")
+            self.update_status(f"{gid} deleted.", "red")
             self.selected_gadget_id = None
             self.apply_filter()
-            messagebox.showinfo("Silindi", f"{gid} kaydı başarıyla silindi!")
+            messagebox.showinfo("Deleted", f"Record {gid} was successfully deleted!")
         except Exception as err:
-            messagebox.showerror("Hata", f"Silme işlemi kaydedilemedi: {err}")
+            messagebox.showerror("Error", f"Failed to save deletion: {err}")
+
+    def check_and_prompt_git_identity(self):
+        res_name = subprocess.run(["git", "config", "user.name"], capture_output=True, text=True)
+        res_email = subprocess.run(["git", "config", "user.email"], capture_output=True, text=True)
+        if not res_name.stdout.strip() or not res_email.stdout.strip():
+            dialog = GitIdentityDialog(self)
+            self.wait_window(dialog)
+            return dialog.result
+        return True
 
     def git_push(self):
+        if not self.check_and_prompt_git_identity():
+            self.update_status("Git Push cancelled (Identity required).", "red")
+            return
+
         if self.gadgets_data:
             last_g = self.gadgets_data[-1]
             g_name = last_g.get("name") or last_g.get("id") or "Gadget"
@@ -782,8 +805,8 @@ class GadgetViewerApp(tk.Tk):
         else:
             commit_msg = "update: gadgets via viewer"
 
-        self.btn_git.config(state="disabled", text="⏳ Push Ediliyor...")
-        self.update_status("🔄 GitHub'a push ediliyor, lütfen bekleyin...", "orange")
+        self.btn_git.config(state="disabled", text="Pushing...")
+        self.update_status("Pushing to GitHub, please wait...", "orange")
 
         def run_git_commands():
             try:
@@ -793,17 +816,15 @@ class GadgetViewerApp(tk.Tk):
                 except Exception:
                     pass
 
-                # Değişiklik var mı kontrol et
                 status_res = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
                 has_uncommitted = bool(status_res.stdout.strip())
 
-                # Push edilmemiş yerel commit var mı kontrol et
                 unpushed_res = subprocess.run(["git", "log", "@{u}..HEAD", "--oneline"], capture_output=True, text=True)
                 has_unpushed = bool(unpushed_res.stdout.strip())
 
                 if not has_uncommitted and not has_unpushed:
-                    self.after(0, lambda: messagebox.showinfo("Bilgi", "GitHub zaten güncel! Gönderilecek yeni bir değişiklik bulunmuyor."))
-                    self.after(0, lambda: self.update_status("ℹ️ Değişiklik yok. GitHub zaten güncel.", "blue"))
+                    self.after(0, lambda: messagebox.showinfo("Info", "GitHub is already up to date! No changes to push."))
+                    self.after(0, lambda: self.update_status("GitHub is up to date.", "blue"))
                     return
 
                 if has_uncommitted:
@@ -812,18 +833,122 @@ class GadgetViewerApp(tk.Tk):
 
                 subprocess.run(["git", "push"], check=True, capture_output=True)
 
-                self.after(0, lambda: messagebox.showinfo("GitHub Push", f"'{commit_msg}' başarıyla GitHub'a gönderildi!"))
-                self.after(0, lambda: self.update_status("✅ GitHub Push Tamamlandı!", "green"))
+                self.after(0, lambda: messagebox.showinfo("GitHub Push", f"'{commit_msg}' successfully pushed to GitHub!"))
+                self.after(0, lambda: self.update_status("GitHub Push Completed!", "green"))
             except subprocess.CalledProcessError as err:
                 err_msg = err.stderr.decode('utf-8', errors='ignore') if err.stderr else str(err)
-                self.after(0, lambda: messagebox.showerror("Git Hata", f"Push sırasında hata oluştu:\n{err_msg}"))
-                self.after(0, lambda: self.update_status("❌ Git Push Başarısız!", "red"))
+                if any(k in err_msg for k in ["Author identity unknown", "Please tell me who you are", "unable to auto-detect email address"]):
+                    def retry_identity():
+                        if self.check_and_prompt_git_identity():
+                            self.git_push()
+                    self.after(0, retry_identity)
+                else:
+                    self.after(0, lambda: messagebox.showerror("Git Error", f"Error occurred during push:\n{err_msg}"))
+                    self.after(0, lambda: self.update_status("Git Push Failed!", "red"))
             finally:
-                self.after(0, lambda: self.btn_git.config(state="normal", text="🚀 GitHub'a Push Et"))
+                self.after(0, lambda: self.btn_git.config(state="normal", text="Push to GitHub"))
 
         threading.Thread(target=run_git_commands, daemon=True).start()
 
 
+class GitIdentityDialog(tk.Toplevel):
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.title("GitHub Kimlik Girişi")
+        self.geometry("450x290")
+        self.resizable(False, False)
+        self.transient(parent)
+        self.grab_set()
+
+        self.result = False
+
+        self.update_idletasks()
+        try:
+            x = parent.winfo_rootx() + (parent.winfo_width() // 2) - 225
+            y = parent.winfo_rooty() + (parent.winfo_height() // 2) - 145
+            self.geometry(f"+{max(0, x)}+{max(0, y)}")
+        except Exception:
+            pass
+
+        lbl_header = tk.Label(
+            self, text="GitHub Kimlik ve Giriş Bilgileri",
+            font=("Arial", 11, "bold"), fg="#333333"
+        )
+        lbl_header.pack(padx=15, pady=(15, 5), anchor="w")
+
+        lbl_info = tk.Label(
+            self, text="Git push işlemi için kullanıcı adınız ve e-postanız gereklidir:",
+            justify="left", font=("Arial", 9), fg="#555555"
+        )
+        lbl_info.pack(padx=15, pady=(0, 10), anchor="w")
+
+        frame_form = tk.Frame(self)
+        frame_form.pack(padx=15, pady=5, fill="x")
+
+        tk.Label(frame_form, text="GitHub Kullanıcı Adı:", font=("Arial", 9, "bold")).grid(row=0, column=0, sticky="w", pady=5)
+        self.ent_name = tk.Entry(frame_form, font=("Arial", 10))
+        self.ent_name.grid(row=0, column=1, sticky="ew", pady=5, padx=(10, 0))
+        self.ent_name.insert(0, "mrtfff")
+
+        tk.Label(frame_form, text="E-posta Adresi:", font=("Arial", 9, "bold")).grid(row=1, column=0, sticky="w", pady=5)
+        self.ent_email = tk.Entry(frame_form, font=("Arial", 10))
+        self.ent_email.grid(row=1, column=1, sticky="ew", pady=5, padx=(10, 0))
+
+        frame_form.columnconfigure(1, weight=1)
+
+        self.var_global = tk.BooleanVar(value=True)
+        chk_global = tk.Checkbutton(
+            self, text="Bu bilgileri tüm projeler için kaydet (--global)",
+            variable=self.var_global, font=("Arial", 9)
+        )
+        chk_global.pack(padx=15, pady=5, anchor="w")
+
+        btn_frame = tk.Frame(self)
+        btn_frame.pack(padx=15, pady=(15, 10), fill="x")
+
+        btn_save = tk.Button(
+            btn_frame, text="Giriş Yap & Push Et", bg="#9C27B0", fg="white",
+            font=("Arial", 10, "bold"), command=self.on_save
+        )
+        btn_save.pack(side="right", padx=(5, 0))
+
+        btn_cancel = tk.Button(
+            btn_frame, text="İptal", bg="#757575", fg="white",
+            font=("Arial", 10), command=self.destroy
+        )
+        btn_cancel.pack(side="right")
+
+    def on_save(self):
+        name = self.ent_name.get().strip()
+        email = self.ent_email.get().strip()
+        if not name or not email:
+            messagebox.showwarning("Eksik Bilgi", "Lütfen hem kullanıcı adınızı hem de e-postanızı girin.", parent=self)
+            return
+
+        cmd_name = ["git", "config"]
+        cmd_email = ["git", "config"]
+        if self.var_global.get():
+            cmd_name.append("--global")
+            cmd_email.append("--global")
+
+        cmd_name.extend(["user.name", name])
+        cmd_email.extend(["user.email", email])
+
+        try:
+            subprocess.run(cmd_name, check=True)
+            subprocess.run(cmd_email, check=True)
+            self.result = True
+            self.destroy()
+        except Exception as e:
+            messagebox.showerror("Hata", f"Git ayarları kaydedilemedi:\n{e}", parent=self)
+
+
 if __name__ == "__main__":
+    print("Rick C-137 Arsenal Viewer starting...", flush=True)
     app = GadgetViewerApp()
-    app.mainloop()
+    print("Viewer UI active, entering main loop.", flush=True)
+    try:
+        app.mainloop()
+    except KeyboardInterrupt:
+        print("\n[LOG] Ctrl+C detected. Exiting Viewer safely...", flush=True)
+        app.on_closing()

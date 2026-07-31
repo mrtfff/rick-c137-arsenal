@@ -1243,5 +1243,80 @@
       "full": "assets/season_02/episode_09/tag#083_full.png",
       "focus": "assets/season_02/episode_09/tag#083_focus.png"
     }
+  },
+  {
+    "id": "tag#084",
+    "name": "Suit-Mounted Missile Launcher",
+    "season": 2,
+    "episode": 9,
+    "timestamp": "18:13",
+    "category_id": 4,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A missile launcher integrated into the Purge Suit's arm that fires high-explosive missiles.",
+    "images": {
+      "full": "assets/season_02/episode_09/tag#084_full.png",
+      "focus": "assets/season_02/episode_09/tag#084_focus.png"
+    }
+  },
+  {
+    "id": "tag#085",
+    "name": "Microscopic Monocular",
+    "season": 2,
+    "episode": 10,
+    "timestamp": "13:56",
+    "category_id": 0,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A handheld optical device that instantly magnifies objects down to a microscopic scale.",
+    "images": {
+      "full": "assets/season_02/episode_10/tag#085_full.png",
+      "focus": "assets/season_02/episode_10/tag#085_focus.png"
+    }
+  },
+  {
+    "id": "tag#086",
+    "name": "portal gun(blue)",
+    "season": 3,
+    "episode": 1,
+    "timestamp": "05:59",
+    "category_id": 0,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": null,
+    "images": {
+      "full": "assets/season_03/episode_01/tag#086_full.png",
+      "focus": "assets/season_03/episode_01/tag#086_focus.png"
+    }
+  },
+  {
+    "id": "tag#087",
+    "name": "Blue laser electric-firing gun",
+    "season": 3,
+    "episode": 1,
+    "timestamp": "15:46",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "Used by Rick Sanchez, this lethal futuristic weapon fires a high-energy blue electric laser beam designed to directly kill targets.",
+    "images": {
+      "full": "assets/season_03/episode_01/tag#087_full.png",
+      "focus": "assets/season_03/episode_01/tag#087_focus.png"
+    }
+  },
+  {
+    "id": "tag#088",
+    "name": "Fake blue laser pistol",
+    "season": 3,
+    "episode": 1,
+    "timestamp": "17:18",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "This fake blue laser gun fires a harmless, non-lethal blue laser beam instead of a deadly charge.",
+    "images": {
+      "full": "assets/season_03/episode_01/tag#088_full.png",
+      "focus": "assets/season_03/episode_01/tag#088_focus.png"
+    }
   }
 ]

@@ -2,39 +2,39 @@
   "categories": [
     {
       "id": 0,
-      "name": "Elde Taşınır Silah / Cihaz"
+      "name": "Handheld Weapon / Device"
     },
     {
       "id": 1,
-      "name": "Sibernetik / Vücut İmplantı"
+      "name": "Cybernetic / Body Implant"
     },
     {
       "id": 2,
-      "name": "Araç / Taşıt / Uyarlama"
+      "name": "Vehicle / Transport / Adaptation"
     },
     {
       "id": 3,
-      "name": "Garaj / Laboratuvar Ekipmanı"
+      "name": "Garage / Lab Equipment"
     },
     {
       "id": 4,
-      "name": "Giyilebilir Ekipman / Zırh / Jetpack"
+      "name": "Wearable Equipment / Armor / Jetpack"
     },
     {
       "id": 5,
-      "name": "Biyolojik / Genetik / Kimyasal İcat"
+      "name": "Biological / Genetic / Chemical Invention"
     },
     {
       "id": 6,
-      "name": "Diğer / Özel İcat"
+      "name": "Other / Special Invention"
     },
     {
       "id": 7,
-      "name": "Emin Değilim / Bilinmiyor"
+      "name": "Unclassified / Unknown"
     },
     {
       "id": 8,
-      "name": "mekiğe takılı cihazlar"
+      "name": "Ship-Mounted Device"
     }
   ]
 }

@@ -2,31 +2,31 @@
   "threat_levels": [
     {
       "id": 0,
-      "name": "Zararsız / İşlevsel"
+      "name": "Harmless / Utility"
     },
     {
       "id": 1,
-      "name": "Dolaylı Tehlike / Taktiksel"
+      "name": "Indirect Hazard / Tactical"
     },
     {
       "id": 2,
-      "name": "Kişisel / Doğrudan Hasar"
+      "name": "Personal Lethality"
     },
     {
       "id": 3,
-      "name": "Kitle / Bölgesel Tahrip"
+      "name": "Area Destruction"
     },
     {
       "id": 4,
-      "name": "Gezegen / Medeniyet Tehdidi"
+      "name": "Planetary Threat"
     },
     {
       "id": 5,
-      "name": "Evrensel / Gerçeklik Bükücü"
+      "name": "Multiversal / Reality Bending"
     },
     {
       "id": 99,
-      "name": "Emin Değilim / Bilinmiyor"
+      "name": "Unclassified / Unknown"
     }
   ]
 }

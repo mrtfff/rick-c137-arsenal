@@ -1318,5 +1318,20 @@
       "full": "assets/season_03/episode_01/tag#088_full.png",
       "focus": "assets/season_03/episode_01/tag#088_focus.png"
     }
+  },
+  {
+    "id": "tag#089",
+    "name": "Rick's Dead Fly Garage Switch",
+    "season": 3,
+    "episode": 1,
+    "timestamp": "20:18",
+    "category_id": 3,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "Arranging the five dead flies on the workbench in the correct pattern retracts the everyday camouflage items and unlocks Rick's true secret underground lab.",
+    "images": {
+      "full": "assets/season_03/episode_01/tag#089_full.png",
+      "focus": "assets/season_03/episode_01/tag#089_focus.png"
+    }
   }
 ]

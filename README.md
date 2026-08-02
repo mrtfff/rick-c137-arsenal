@@ -9,13 +9,13 @@ A high-precision manual screen-capture logging and archiving system designed to 
 <!-- STATS:START -->
 | Metric | Value |
 | :--- | :--- |
-| Total Registered Inventions | **89** |
+| Total Registered Inventions | **90** |
 | Seasons Analyzed | **3** (Season 01 - 03) |
-| Episodes Analyzed | **22** |
-| Confirmed C-137 Invention Ratio | **97%** (87/89) |
+| Episodes Analyzed | **23** |
+| Confirmed C-137 Invention Ratio | **97%** (88/90) |
 
 ### Category Breakdown
-- **Handheld Weapon / Device:** 38 items
+- **Handheld Weapon / Device:** 39 items
 - **Cybernetic / Body Implant:** 0 items
 - **Vehicle / Adaptation:** 3 items
 - **Garage / Lab Equipment:** 9 items
@@ -28,7 +28,7 @@ A high-precision manual screen-capture logging and archiving system designed to 
 ### Threat Level Breakdown
 - **[0] Harmless / Utility:** 29 items
 - **[1] Indirect Hazard / Tactical:** 20 items
-- **[2] Personal Lethality:** 28 items
+- **[2] Personal Lethality:** 29 items
 - **[3] Area Destruction:** 7 items
 - **[4] Planetary Threat:** 1 items
 - **[5] Multiversal / Reality Bending:** 0 items

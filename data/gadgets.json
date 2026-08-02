@@ -1333,5 +1333,20 @@
       "full": "assets/season_03/episode_01/tag#089_full.png",
       "focus": "assets/season_03/episode_01/tag#089_focus.png"
     }
+  },
+  {
+    "id": "tag#090",
+    "name": "Unidentified Sci-Fi Blaster",
+    "season": 3,
+    "episode": 2,
+    "timestamp": "00:34",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A futuristic handheld energy weapon that is never fired or named on screen. Its precise capabilities and power output remain unknown.",
+    "images": {
+      "full": "assets/season_03/episode_02/tag#090_full.png",
+      "focus": "assets/season_03/episode_02/tag#090_focus.png"
+    }
   }
 ]

@@ -9,26 +9,26 @@ A high-precision manual screen-capture logging and archiving system designed to 
 <!-- STATS:START -->
 | Metric | Value |
 | :--- | :--- |
-| Total Registered Inventions | **90** |
+| Total Registered Inventions | **107** |
 | Seasons Analyzed | **3** (Season 01 - 03) |
-| Episodes Analyzed | **23** |
-| Confirmed C-137 Invention Ratio | **97%** (88/90) |
+| Episodes Analyzed | **25** |
+| Confirmed C-137 Invention Ratio | **98%** (105/107) |
 
 ### Category Breakdown
-- **Handheld Weapon / Device:** 39 items
-- **Cybernetic / Body Implant:** 0 items
-- **Vehicle / Adaptation:** 3 items
-- **Garage / Lab Equipment:** 9 items
-- **Wearable Equipment / Armor / Jetpack:** 15 items
-- **Biological / Genetic / Chemical Invention:** 6 items
-- **Other / Special Invention:** 8 items
-- **Unclassified / Unknown:** 1 items
+- **Handheld Weapon / Device:** 43 items
+- **Cybernetic / Body Implant:** 2 items
+- **Vehicle / Adaptation:** 4 items
+- **Garage / Lab Equipment:** 10 items
+- **Wearable Equipment / Armor / Jetpack:** 20 items
+- **Biological / Genetic / Chemical Invention:** 8 items
+- **Other / Special Invention:** 9 items
+- **Unclassified / Unknown:** 2 items
 - **Ship-Mounted Device:** 9 items
 
 ### Threat Level Breakdown
-- **[0] Harmless / Utility:** 29 items
-- **[1] Indirect Hazard / Tactical:** 20 items
-- **[2] Personal Lethality:** 29 items
+- **[0] Harmless / Utility:** 37 items
+- **[1] Indirect Hazard / Tactical:** 24 items
+- **[2] Personal Lethality:** 34 items
 - **[3] Area Destruction:** 7 items
 - **[4] Planetary Threat:** 1 items
 - **[5] Multiversal / Reality Bending:** 0 items

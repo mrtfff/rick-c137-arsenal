@@ -1336,17 +1336,272 @@
   },
   {
     "id": "tag#090",
-    "name": "Unidentified Sci-Fi Blaster",
+    "name": "Cyan Energy Laser Gun",
     "season": 3,
     "episode": 2,
     "timestamp": "00:34",
     "category_id": 0,
     "threat_level": 2,
     "c137_confirmed": true,
-    "description": "A futuristic handheld energy weapon that is never fired or named on screen. Its precise capabilities and power output remain unknown.",
+    "description": "A standard directed-energy sidearm that discharges concentrated light-blue laser beams. Capable of disintegrating, vaporizing, or piercing targets with lethal precision.(see 9:00 for first use)",
     "images": {
       "full": "assets/season_03/episode_02/tag#090_full.png",
       "focus": "assets/season_03/episode_02/tag#090_focus.png"
+    }
+  },
+  {
+    "id": "tag#091",
+    "name": "Post-Apocalyptic Spiked Vehicle",
+    "season": 3,
+    "episode": 2,
+    "timestamp": "02:39",
+    "category_id": 2,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A modified dieselpunk vehicle built to traverse desert wastelands and evade hostile scavengers. It features a custom engine intake manifold that can use high-proof alcohol as an improvised nitrous boost.",
+    "images": {
+      "full": "assets/season_03/episode_02/tag#091_full.png",
+      "focus": "assets/season_03/episode_02/tag#091_focus.png"
+    }
+  },
+  {
+    "id": "tag#092",
+    "name": "Isotope-322 Proximity Scanner",
+    "season": 3,
+    "episode": 2,
+    "timestamp": "02:44",
+    "category_id": 0,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A handheld scanning device designed to track and display proximity to Isotope-322.",
+    "images": {
+      "full": "assets/season_03/episode_02/tag#092_full.png",
+      "focus": "assets/season_03/episode_02/tag#092_focus.png"
+    }
+  },
+  {
+    "id": "tag#093",
+    "name": "Muscle Memory Extractor & Injector",
+    "season": 3,
+    "episode": 2,
+    "timestamp": "06:07",
+    "category_id": 5,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A syringe-like biological device capable of extracting muscle memory from biological tissue and injecting it into a recipient, instantly transferring combat skills and physical strength to the target limb.",
+    "images": {
+      "full": "assets/season_03/episode_02/tag#093_full.png",
+      "focus": "assets/season_03/episode_02/tag#093_focus.png"
+    }
+  },
+  {
+    "id": "tag#094",
+    "name": "Robot Replacement Wristwatch",
+    "season": 3,
+    "episode": 2,
+    "timestamp": "14:23",
+    "category_id": 4,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A digital wristwatch designed specifically for the Robot Morty and Robot Summer decoys.",
+    "images": {
+      "full": "assets/season_03/episode_02/tag#094_full.png",
+      "focus": "assets/season_03/episode_02/tag#094_focus.png"
+    }
+  },
+  {
+    "id": "tag#095",
+    "name": "Isotope 322 Power Generator",
+    "season": 3,
+    "episode": 2,
+    "timestamp": "18:42",
+    "category_id": 3,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A garage machine powered by Isotope 322 that generates and distributes electricity to the entire post-apocalyptic dimension.",
+    "images": {
+      "full": "assets/season_03/episode_02/tag#095_full.png",
+      "focus": "assets/season_03/episode_02/tag#095_focus.png"
+    }
+  },
+  {
+    "id": "tag#096",
+    "name": "Anti-Pickle Serum Syringe",
+    "season": 3,
+    "episode": 3,
+    "timestamp": "03:29",
+    "category_id": 5,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A syringe filled with a chemical serum that transforms Pickle Rick back into a human.",
+    "images": {
+      "full": "assets/season_03/episode_03/tag#096_full.png",
+      "focus": "assets/season_03/episode_03/tag#096_focus.png"
+    }
+  },
+  {
+    "id": "tag#097",
+    "name": "Tongue-Controlled Cockroach",
+    "season": 3,
+    "episode": 3,
+    "timestamp": "05:52",
+    "category_id": 7,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A cockroach whose brain is exposed and hijacked by Pickle Rick using his tongue to control its motor nerves and movement.",
+    "images": {
+      "full": "assets/season_03/episode_03/tag#097_full.png",
+      "focus": "assets/season_03/episode_03/tag#097_focus.png"
+    }
+  },
+  {
+    "id": "tag#098",
+    "name": "Cockroach Exosuit",
+    "season": 3,
+    "episode": 3,
+    "timestamp": "07:43",
+    "category_id": 4,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "An exoskeleton made entirely of cockroach limbs and parts, neural-controlled by Pickle Rick for mobility.",
+    "images": {
+      "full": "assets/season_03/episode_03/tag#098_full.png",
+      "focus": "assets/season_03/episode_03/tag#098_focus.png"
+    }
+  },
+  {
+    "id": "tag#099",
+    "name": "Rat Suit (official)",
+    "season": 3,
+    "episode": 3,
+    "timestamp": "08:30",
+    "category_id": 4,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A violent exoskeleton built from rat corpses, granting Pickle Rick rat-powered arms, legs, and deadly claws.",
+    "images": {
+      "full": "assets/season_03/episode_03/tag#099_full.png",
+      "focus": "assets/season_03/episode_03/tag#099_focus.png"
+    }
+  },
+  {
+    "id": "tag#100",
+    "name": "Arm-Mounted Screw Gun",
+    "season": 3,
+    "episode": 3,
+    "timestamp": "08:41",
+    "category_id": 1,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A pneumatic screw shooter integrated into the Rat Suit's arm that fires screws at high speed.",
+    "images": {
+      "full": "assets/season_03/episode_03/tag#100_full.png",
+      "focus": "assets/season_03/episode_03/tag#100_focus.png"
+    }
+  },
+  {
+    "id": "tag#101",
+    "name": "Pickle Rick's Jetpack",
+    "season": 3,
+    "episode": 3,
+    "timestamp": "10:22",
+    "category_id": 4,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A makeshift jetpack built from batteries and scrap parts attached to the Rat Suit, enabling Pickle Rick to fly.",
+    "images": {
+      "full": "assets/season_03/episode_03/tag#101_full.png",
+      "focus": "assets/season_03/episode_03/tag#101_focus.png"
+    }
+  },
+  {
+    "id": "tag#102",
+    "name": "Rat-Head Gas Mask Hood",
+    "season": 3,
+    "episode": 3,
+    "timestamp": "10:23",
+    "category_id": 4,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A hood and gas mask crafted from a rat's head and skull that filters out toxic fumes and smoke.",
+    "images": {
+      "full": "assets/season_03/episode_03/tag#102_full.png",
+      "focus": "assets/season_03/episode_03/tag#102_focus.png"
+    }
+  },
+  {
+    "id": "tag#103",
+    "name": "Pickle Rick's Battery Laser Gun",
+    "season": 3,
+    "episode": 3,
+    "timestamp": "12:50",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A high-powered laser pistol assembled by Pickle Rick using AA batteries, wires, and scavenged electronic parts.",
+    "images": {
+      "full": "assets/season_03/episode_03/tag#103_full.png",
+      "focus": "assets/season_03/episode_03/tag#103_focus.png"
+    }
+  },
+  {
+    "id": "tag#104",
+    "name": "Handheld Worm Extractor",
+    "season": 3,
+    "episode": 4,
+    "timestamp": "00:04",
+    "category_id": 0,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A handheld vacuum gun that sucks small worm-like creatures into its container tube.",
+    "images": {
+      "full": "assets/season_03/episode_04/tag#104_full.png",
+      "focus": "assets/season_03/episode_04/tag#104_focus.png"
+    }
+  },
+  {
+    "id": "tag#105",
+    "name": "Vindicator Distress Gem",
+    "season": 3,
+    "episode": 4,
+    "timestamp": "00:18",
+    "category_id": 6,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A glowing diamond-like gem sent by the Vindicators to project a distress signal and summon Rick for help",
+    "images": {
+      "full": "assets/season_03/episode_04/tag#105_full.png",
+      "focus": "assets/season_03/episode_04/tag#105_focus.png"
+    }
+  },
+  {
+    "id": "tag#106",
+    "name": "Bullet-Recycling Drone Converter",
+    "season": 3,
+    "episode": 4,
+    "timestamp": "07:32",
+    "category_id": 0,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A square defense device that creates a circular field to catch incoming bullets, recycles them into metal discs, and deploys them as tiny turret-destroying robots.",
+    "images": {
+      "full": "assets/season_03/episode_04/tag#106_full.png",
+      "focus": "assets/season_03/episode_04/tag#106_focus.png"
+    }
+  },
+  {
+    "id": "tag#107",
+    "name": "Nanofiber Defense Mesh (official)",
+    "season": 3,
+    "episode": 4,
+    "timestamp": "11:46",
+    "category_id": 1,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A bio-cybernetic defense mesh integrated into the skin that automatically electrocutes anyone who physically grabs the user's neck.",
+    "images": {
+      "full": "assets/season_03/episode_04/tag#107_full.png",
+      "focus": "assets/season_03/episode_04/tag#107_focus.png"
     }
   }
 ]

@@ -1738,5 +1738,110 @@
       "full": "assets/season_03/episode_05/tag#116_full.png",
       "focus": "assets/season_03/episode_05/tag#116_focus.png"
     }
+  },
+  {
+    "id": "tag#117",
+    "name": "Spaceship Orange Power Cube",
+    "season": 3,
+    "episode": 6,
+    "timestamp": "01:09",
+    "category_id": 8,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "An orange metallic power cube used as the engine core to power Rick's spaceship.",
+    "images": {
+      "full": "assets/season_03/episode_06/tag#117_full.png",
+      "focus": "assets/season_03/episode_06/tag#117_focus.png"
+    }
+  },
+  {
+    "id": "tag#118",
+    "name": "Converging Energy Super-Laser",
+    "season": 3,
+    "episode": 6,
+    "timestamp": "01:15",
+    "category_id": 8,
+    "threat_level": 4,
+    "c137_confirmed": true,
+    "description": "A high-energy ship cannon that fires seven blue laser beams converging into a single beam to destroy alien space colonies.",
+    "images": {
+      "full": "assets/season_03/episode_06/tag#118_full.png",
+      "focus": "assets/season_03/episode_06/tag#118_focus.png"
+    }
+  },
+  {
+    "id": "tag#120",
+    "name": "Cognitive Detoxifier (official)",
+    "season": 3,
+    "episode": 6,
+    "timestamp": "11:58",
+    "category_id": 6,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A Cognitive Detoxifier machine that extracts a person's perceived mental toxicity into a separate entity and can re-merge or swap them.",
+    "images": {
+      "full": "assets/season_03/episode_06/tag#120_full.png",
+      "focus": "assets/season_03/episode_06/tag#120_focus.png"
+    }
+  },
+  {
+    "id": "tag#119",
+    "name": "Groin System 6000 (official)",
+    "season": 3,
+    "episode": 6,
+    "timestamp": "13:35",
+    "category_id": 1,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A targeting and attack device named Groin System 6000 that calculates groin damage and fires targeted laser blasts.",
+    "images": {
+      "full": "assets/season_03/episode_06/tag#119_full.png",
+      "focus": "assets/season_03/episode_06/tag#119_focus.png"
+    }
+  },
+  {
+    "id": "tag#121",
+    "name": "Six-Eyed Monster Bomb",
+    "season": 3,
+    "episode": 6,
+    "timestamp": "14:02",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A bomb-like capsule thrown by Toxic Rick that releases a rapidly growing 6-eyed alien monster to attack his enemy.",
+    "images": {
+      "full": "assets/season_03/episode_06/tag#121_full.png",
+      "focus": "assets/season_03/episode_06/tag#121_focus.png"
+    }
+  },
+  {
+    "id": "tag#122",
+    "name": "Blood-Gestation Syringe Gun",
+    "season": 3,
+    "episode": 6,
+    "timestamp": "14:12",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A syringe gun that draws the user's blood and shoots it into an enemy, giving birth to a rapidly aging clone inside the target's body.",
+    "images": {
+      "full": "assets/season_03/episode_06/tag#122_full.png",
+      "focus": "assets/season_03/episode_06/tag#122_focus.png"
+    }
+  },
+  {
+    "id": "tag#123",
+    "name": "Modified Cognitive Detoxifier",
+    "season": 3,
+    "episode": 6,
+    "timestamp": "16:18",
+    "category_id": 8,
+    "threat_level": 4,
+    "c137_confirmed": true,
+    "description": "A modified cognitive detoxifier mounted on a tower that projects a global energy wave to make the entire world toxic.",
+    "images": {
+      "full": "assets/season_03/episode_06/tag#123_full.png",
+      "focus": "assets/season_03/episode_06/tag#123_focus.png"
+    }
   }
 ]

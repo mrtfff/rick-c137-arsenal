@@ -1828,5 +1828,20 @@
       "full": "assets/season_03/episode_06/tag#122_full.png",
       "focus": "assets/season_03/episode_06/tag#122_focus.png"
     }
+  },
+  {
+    "id": "tag#123",
+    "name": "Modified Cognitive Detoxifier",
+    "season": 3,
+    "episode": 6,
+    "timestamp": "16:18",
+    "category_id": 8,
+    "threat_level": 4,
+    "c137_confirmed": true,
+    "description": "A modified cognitive detoxifier mounted on a tower that projects a global energy wave to make the entire world toxic.",
+    "images": {
+      "full": "assets/season_03/episode_06/tag#123_full.png",
+      "focus": "assets/season_03/episode_06/tag#123_focus.png"
+    }
   }
 ]

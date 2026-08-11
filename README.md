@@ -21,9 +21,9 @@ A high-precision manual screen-capture logging and archiving system designed to 
 - **Garage / Lab Equipment:** 14 items
 - **Wearable Equipment / Armor / Jetpack:** 21 items
 - **Biological / Genetic / Chemical Invention:** 8 items
-- **Other / Special Invention:** 11 items
+- **Other / Special Invention:** 12 items
 - **Unclassified / Unknown:** 2 items
-- **Ship-Mounted Device:** 12 items
+- **Ship-Mounted Device:** 11 items
 
 ### Threat Level Breakdown
 - **[0] Harmless / Utility:** 38 items

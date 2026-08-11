@@ -1603,5 +1603,140 @@
       "full": "assets/season_03/episode_04/tag#107_full.png",
       "focus": "assets/season_03/episode_04/tag#107_focus.png"
     }
+  },
+  {
+    "id": "tag#108",
+    "name": "Neutrino Bomb (Drunken Variant)",
+    "season": 3,
+    "episode": 4,
+    "timestamp": "14:26",
+    "category_id": 6,
+    "threat_level": 4,
+    "c137_confirmed": true,
+    "description": "A sloppy neutrino bomb built by Rick while blackout-drunk, easily defused by Morty with a pair of pliers.",
+    "images": {
+      "full": "assets/season_03/episode_04/tag#108_full.png",
+      "focus": "assets/season_03/episode_04/tag#108_focus.png"
+    }
+  },
+  {
+    "id": "tag#115",
+    "name": "Red Laser-Gate & Twin-Barrel Turret",
+    "season": 3,
+    "episode": 5,
+    "timestamp": "00:00",
+    "category_id": 3,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A front-entrance defense system featuring vertical red laser bars and an overhead twin-barreled sentry turret for enemies.",
+    "images": {
+      "full": "assets/season_03/episode_05/tag#115_full.png",
+      "focus": "assets/season_03/episode_05/tag#115_focus.png"
+    }
+  },
+  {
+    "id": "tag#109",
+    "name": "Morphizer-XE",
+    "season": 3,
+    "episode": 5,
+    "timestamp": "04:47",
+    "category_id": 3,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A garage device capable of altering physical body proportions, which accidentally mutates Summer into a skinless giant.",
+    "images": {
+      "full": "assets/season_03/episode_05/tag#109_full.png",
+      "focus": "assets/season_03/episode_05/tag#109_focus.png"
+    }
+  },
+  {
+    "id": "tag#110",
+    "name": "Morphizer-XE",
+    "season": 3,
+    "episode": 5,
+    "timestamp": "06:56",
+    "category_id": 3,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A garage device capable of altering physical body proportions, which accidentally mutates Summer into a skinless giant.",
+    "images": {
+      "full": "assets/season_03/episode_05/tag#110_full.png",
+      "focus": "assets/season_03/episode_05/tag#110_focus.png"
+    }
+  },
+  {
+    "id": "tag#111",
+    "name": "Rick's Lab Coat Self-Destruct Bomb",
+    "season": 3,
+    "episode": 5,
+    "timestamp": "11:07",
+    "category_id": 4,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A self-destruct bomb built inside Rick's lab coat that can be set on a timer and detonated.",
+    "images": {
+      "full": "assets/season_03/episode_05/tag#111_full.png",
+      "focus": "assets/season_03/episode_05/tag#111_focus.png"
+    }
+  },
+  {
+    "id": "tag#113",
+    "name": "Improvised Neural Beast Controller",
+    "season": 3,
+    "episode": 5,
+    "timestamp": "13:38",
+    "category_id": 0,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A wired neural controller built from scrap parts that jabs a needle into a monster's brain to hijack and control it.",
+    "images": {
+      "full": "assets/season_03/episode_05/tag#113_full.png",
+      "focus": "assets/season_03/episode_05/tag#113_focus.png"
+    }
+  },
+  {
+    "id": "tag#112",
+    "name": "Poison Dart Blowgun",
+    "season": 3,
+    "episode": 5,
+    "timestamp": "13:53",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A primitive blowgun crafted from hollow alien reeds that fires venom-coated darts by blowing through the tube.",
+    "images": {
+      "full": "assets/season_03/episode_05/tag#112_full.png",
+      "focus": "assets/season_03/episode_05/tag#112_focus.png"
+    }
+  },
+  {
+    "id": "tag#114",
+    "name": "Cybernetic Vacuum Plunger Limb",
+    "season": 3,
+    "episode": 5,
+    "timestamp": "18:57",
+    "category_id": 1,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A cybernetic arm attachment that fires a mini vacuum plunger to latch onto targets and pull them back.",
+    "images": {
+      "full": "assets/season_03/episode_05/tag#114_full.png",
+      "focus": "assets/season_03/episode_05/tag#114_focus.png"
+    }
+  },
+  {
+    "id": "tag#116",
+    "name": "Red Laser-Gate & Twin-Barrel Turret",
+    "season": 3,
+    "episode": 5,
+    "timestamp": "21:11",
+    "category_id": 3,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A front-entrance defense system featuring vertical red laser bars and an overhead twin-barreled sentry turret for enemies.",
+    "images": {
+      "full": "assets/season_03/episode_05/tag#116_full.png",
+      "focus": "assets/season_03/episode_05/tag#116_focus.png"
+    }
   }
 ]

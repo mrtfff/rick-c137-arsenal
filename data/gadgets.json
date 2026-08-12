@@ -1843,5 +1843,365 @@
       "full": "assets/season_03/episode_06/tag#123_full.png",
       "focus": "assets/season_03/episode_06/tag#123_focus.png"
     }
+  },
+  {
+    "id": "tag#124",
+    "name": "Encrypted Nanobot Virus Gun",
+    "season": 3,
+    "episode": 6,
+    "timestamp": "16:50",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A standard-looking handgun that fires bullets laced with an encrypted nanobot virus, disintegrating the target within 20 minutes.",
+    "images": {
+      "full": "assets/season_03/episode_06/tag#124_full.png",
+      "focus": "assets/season_03/episode_06/tag#124_focus.png"
+    }
+  },
+  {
+    "id": "tag#125",
+    "name": "Double-Ended Re-Merging Syringe",
+    "season": 3,
+    "episode": 6,
+    "timestamp": "18:02",
+    "category_id": 5,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A double-ended syringe device with needles on both ends used to inject and merge Healthy Rick and Toxic Rick back into a single person.",
+    "images": {
+      "full": "assets/season_03/episode_06/tag#125_full.png",
+      "focus": "assets/season_03/episode_06/tag#125_focus.png"
+    }
+  },
+  {
+    "id": "tag#126",
+    "name": "Single-Afterburner Jetpack",
+    "season": 3,
+    "episode": 6,
+    "timestamp": "18:07",
+    "category_id": 4,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A compact wearable jetpack powered by a single afterburner thruster for flight.",
+    "images": {
+      "full": "assets/season_03/episode_06/tag#126_full.png",
+      "focus": "assets/season_03/episode_06/tag#126_focus.png"
+    }
+  },
+  {
+    "id": "tag#127",
+    "name": "Toxic Morty Extraction & Injection Syringe",
+    "season": 3,
+    "episode": 6,
+    "timestamp": "18:49",
+    "category_id": 5,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A manual syringe gun with a direct needle used to draw out Toxic Morty and inject him directly into Healthy Morty.",
+    "images": {
+      "full": "assets/season_03/episode_06/tag#127_full.png",
+      "focus": "assets/season_03/episode_06/tag#127_focus.png"
+    }
+  },
+  {
+    "id": "tag#128",
+    "name": "Steel-Cable Restraint Drones",
+    "season": 3,
+    "episode": 6,
+    "timestamp": "20:18",
+    "category_id": 6,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "Armed drones operating in swarms that physically bind and tether targets to themselves using steel cables.",
+    "images": {
+      "full": "assets/season_03/episode_06/tag#128_full.png",
+      "focus": "assets/season_03/episode_06/tag#128_focus.png"
+    }
+  },
+  {
+    "id": "tag#129",
+    "name": "Magazine-Fed Speargun",
+    "season": 3,
+    "episode": 7,
+    "timestamp": "00:50",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A speargun that can take a magazine.",
+    "images": {
+      "full": "assets/season_03/episode_07/tag#129_full.png",
+      "focus": "assets/season_03/episode_07/tag#129_focus.png"
+    }
+  },
+  {
+    "id": "tag#136",
+    "name": "Space Trooper Armor (official)",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "00:00",
+    "category_id": 4,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "An orange space armor worn by Rick and Morty as Space Troopers in one of Morty's erased memories.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#136_full.png",
+      "focus": "assets/season_03/episode_08/tag#136_focus.png"
+    }
+  },
+  {
+    "id": "tag#143",
+    "name": "Anti-Squirrel Wave Emitter",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "00:00",
+    "category_id": 3,
+    "threat_level": 3,
+    "c137_confirmed": true,
+    "description": "A garage device that emits a targeted energy wave to kill or incapacitate all surrounding squirrels.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#143_full.png",
+      "focus": "assets/season_03/episode_08/tag#143_focus.png"
+    }
+  },
+  {
+    "id": "tag#130",
+    "name": "Memory Archive Room",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "00:52",
+    "category_id": 3,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A secret archive room filled with color-coded vials containing erased memories of Morty and other family members.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#130_full.png",
+      "focus": "assets/season_03/episode_08/tag#130_focus.png"
+    }
+  },
+  {
+    "id": "tag#131",
+    "name": "Memory Viewing Helmet",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "01:42",
+    "category_id": 4,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A headset that plays and allows the wearer to relive erased memories when a memory vial is inserted into its slot.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#131_full.png",
+      "focus": "assets/season_03/episode_08/tag#131_focus.png"
+    }
+  },
+  {
+    "id": "tag#132",
+    "name": "Makeshift CRT TV Signal Transmitter",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "04:45",
+    "category_id": 6,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A makeshift transmitter built entirely from the internal components of a CRT television to beam a signal back to Earth.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#132_full.png",
+      "focus": "assets/season_03/episode_08/tag#132_focus.png"
+    }
+  },
+  {
+    "id": "tag#133",
+    "name": "Hand-Cranked Urine Purifier",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "06:23",
+    "category_id": 0,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A hand-cranked portable device that filters and purifies urine into drinkable water.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#133_full.png",
+      "focus": "assets/season_03/episode_08/tag#133_focus.png"
+    }
+  },
+  {
+    "id": "tag#134",
+    "name": "Dual Clamping Micro-Missile Launcher",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "08:50",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A handheld launcher that fires two micro-missiles that open like clamps, latch onto a target, and detonate on impact.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#134_full.png",
+      "focus": "assets/season_03/episode_08/tag#134_focus.png"
+    }
+  },
+  {
+    "id": "tag#137",
+    "name": "Space Trooper Laser Gun",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "11:10",
+    "category_id": 4,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "An orange-colored laser gun matching the Space Trooper suit that fires blue energy blasts.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#137_full.png",
+      "focus": "assets/season_03/episode_08/tag#137_focus.png"
+    }
+  },
+  {
+    "id": "tag#135",
+    "name": "Mindblower Gun (official)",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "12:02",
+    "category_id": 0,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A handheld device that erases specific memories from a target's mind and extracts them into a glass vial.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#135_full.png",
+      "focus": "assets/season_03/episode_08/tag#135_focus.png"
+    }
+  },
+  {
+    "id": "tag#138",
+    "name": "Broom-like Floor Leveller",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "14:16",
+    "category_id": 3,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A broom-like machine used to perform the initial rough levelling of a floor surface before achieving True Level.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#138_full.png",
+      "focus": "assets/season_03/episode_08/tag#138_focus.png"
+    }
+  },
+  {
+    "id": "tag#139",
+    "name": "True Level Floor Module",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "14:39",
+    "category_id": 3,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "An ankle-high square perimeter frame built into the garage floor that scans and measures a surface to achieve True Level.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#139_full.png",
+      "focus": "assets/season_03/episode_08/tag#139_focus.png"
+    }
+  },
+  {
+    "id": "tag#140",
+    "name": "Rick's Lab Visor Goggles",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "15:12",
+    "category_id": 4,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A pair of high-precision laboratory goggles worn on the head to analyze chemical reactions and microscopic details while brewing potions or solutions.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#140_full.png",
+      "focus": "assets/season_03/episode_08/tag#140_focus.png"
+    }
+  },
+  {
+    "id": "tag#141",
+    "name": "Word-Attracting Magnet Machine",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "16:20",
+    "category_id": 3,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "\"A smart magnet machine that creates a magnetic pull to attract whatever item or material you type into its interface.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#141_full.png",
+      "focus": "assets/season_03/episode_08/tag#141_focus.png"
+    }
+  },
+  {
+    "id": "tag#142",
+    "name": "Animal Translator Headset",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "16:55",
+    "category_id": 3,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A headset worn on the head that translates animal thoughts, allowing the wearer to hear and understand what animals are saying.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#142_full.png",
+      "focus": "assets/season_03/episode_08/tag#142_focus.png"
+    }
+  },
+  {
+    "id": "tag#144",
+    "name": "Monster Transformation Chamber",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "18:25",
+    "category_id": 3,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A garage mutation chamber where Morty enters a pod and Rick pulls a lever to transform him into a monster just to laugh at him.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#144_full.png",
+      "focus": "assets/season_03/episode_08/tag#144_focus.png"
+    }
+  },
+  {
+    "id": "tag#145",
+    "name": "tranq gun (official )",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "19:51",
+    "category_id": 0,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A tranquilizer gun labeled 'Tranq Gun' that fires darts to instantly knock out targets.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#145_full.png",
+      "focus": "assets/season_03/episode_08/tag#145_focus.png"
+    }
+  },
+  {
+    "id": "tag#146",
+    "name": "Jerry's Mind Blowers Helmet (official)",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "21:09",
+    "category_id": 0,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A memory viewing helmet kept in a box labeled 'Jerry's Mind Blowers' used by Jerry to watch his own erased memories.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#146_full.png",
+      "focus": "assets/season_03/episode_08/tag#146_focus.png"
+    }
+  },
+  {
+    "id": "tag#147",
+    "name": "Alpha Centauri Teleporter",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "21:23",
+    "category_id": 6,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A large teleportation machine aimed and charged at Alpha Centauri, built to send the alien Gobo back to his home planet.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#147_full.png",
+      "focus": "assets/season_03/episode_08/tag#147_focus.png"
+    }
   }
 ]

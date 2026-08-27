@@ -1950,21 +1950,6 @@
     }
   },
   {
-    "id": "tag#143",
-    "name": "Anti-Squirrel Wave Emitter",
-    "season": 3,
-    "episode": 8,
-    "timestamp": "00:00",
-    "category_id": 3,
-    "threat_level": 3,
-    "c137_confirmed": true,
-    "description": "A garage device that emits a targeted energy wave to kill or incapacitate all surrounding squirrels.",
-    "images": {
-      "full": "assets/season_03/episode_08/tag#143_full.png",
-      "focus": "assets/season_03/episode_08/tag#143_focus.png"
-    }
-  },
-  {
     "id": "tag#130",
     "name": "Memory Archive Room",
     "season": 3,
@@ -2145,6 +2130,21 @@
     }
   },
   {
+    "id": "tag#143",
+    "name": "Anti-Squirrel Wave Emitter",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "17:54",
+    "category_id": 3,
+    "threat_level": 3,
+    "c137_confirmed": true,
+    "description": "A garage device that emits a targeted energy wave to kill or incapacitate all surrounding squirrels.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#143_full.png",
+      "focus": "assets/season_03/episode_08/tag#143_focus.png"
+    }
+  },
+  {
     "id": "tag#144",
     "name": "Monster Transformation Chamber",
     "season": 3,
@@ -2187,6 +2187,396 @@
     "images": {
       "full": "assets/season_03/episode_08/tag#146_full.png",
       "focus": "assets/season_03/episode_08/tag#146_focus.png"
+    }
+  },
+  {
+    "id": "tag#147",
+    "name": "Alpha Centauri Teleporter",
+    "season": 3,
+    "episode": 8,
+    "timestamp": "21:23",
+    "category_id": 6,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A large teleportation machine aimed and charged at Alpha Centauri, built to send the alien Gobo back to his home planet.",
+    "images": {
+      "full": "assets/season_03/episode_08/tag#147_full.png",
+      "focus": "assets/season_03/episode_08/tag#147_focus.png"
+    }
+  },
+  {
+    "id": "tag#148",
+    "name": "Bubble gun(official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "00:47",
+    "category_id": 0,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A handgun that fires soap bubbles that encase and trap targets inside a floating bubble.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#148_full.png",
+      "focus": "assets/season_03/episode_09/tag#148_focus.png"
+    }
+  },
+  {
+    "id": "tag#149",
+    "name": "Instant Mechanical Arm",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "04:42",
+    "category_id": 1,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A compact, pocket-sized device that seals a severed limb's wound by cauterizing it with extreme heat and instantly unfolds into a fully functional golden robotic prosthetic arm at the press of a button",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#149_full.png",
+      "focus": "assets/season_03/episode_09/tag#149_focus.png"
+    }
+  },
+  {
+    "id": "tag#150",
+    "name": "Wrist-Mounted DNA Sampling Laser",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "05:05",
+    "category_id": 1,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A cybernetic laser weapon hidden inside Rick's robotic forearm that obliterates targets with an energy beam while instantly capturing a suspended DNA sample in mid-air for genetic analysis.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#150_full.png",
+      "focus": "assets/season_03/episode_09/tag#150_focus.png"
+    }
+  },
+  {
+    "id": "tag#151",
+    "name": "Beth's Childhood Ray Gun",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:32",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A fully functional, lethal directed-energy firearm that a young Beth demanded from Rick instead of a toy version during her violent childhood phase.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#151_full.png",
+      "focus": "assets/season_03/episode_09/tag#151_focus.png"
+    }
+  },
+  {
+    "id": "tag#152",
+    "name": "Whip That Forces People to Like You (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:33",
+    "category_id": 0,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A whip engineered by Rick for a young Beth that forces anyone struck by it to instantly feel forced affection and like the wielder.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#152_full.png",
+      "focus": "assets/season_03/episode_09/tag#152_focus.png"
+    }
+  },
+  {
+    "id": "tag#153",
+    "name": "Invisibility Cuffs (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:35",
+    "category_id": 4,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A set of cuffs with invisibility properties crafted by Rick among the bizarre childhood items requested by young Beth.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#153_full.png",
+      "focus": "assets/season_03/episode_09/tag#153_focus.png"
+    }
+  },
+  {
+    "id": "tag#154",
+    "name": "Parent Trap (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:36",
+    "category_id": 6,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A literal trap device crafted by Rick as one of the bizarre and concerning childhood inventions requested by a young Beth.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#154_full.png",
+      "focus": "assets/season_03/episode_09/tag#154_focus.png"
+    }
+  },
+  {
+    "id": "tag#155",
+    "name": "lightning hugun (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:37",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A handheld firearm that discharges arcs of high-voltage electricity, built by Rick as one of the lethal childhood items requested by young Beth.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#155_full.png",
+      "focus": "assets/season_03/episode_09/tag#155_focus.png"
+    }
+  },
+  {
+    "id": "tag#156",
+    "name": "Teddy Bear with Anatomically-Correct Innards (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:39",
+    "category_id": 5,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A plush toy bear crafted by Rick for a young Beth that contains fully realistic and anatomically accurate internal biological organs.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#156_full.png",
+      "focus": "assets/season_03/episode_09/tag#156_focus.png"
+    }
+  },
+  {
+    "id": "tag#157",
+    "name": "Night-Vision Googly-Eye Glasses",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:41",
+    "category_id": 4,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A pair of novelty googly-eye glasses built by Rick for a young Beth that secretly functions as high-tech night-vision goggles.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#157_full.png",
+      "focus": "assets/season_03/episode_09/tag#157_focus.png"
+    }
+  },
+  {
+    "id": "tag#158",
+    "name": "Sound-Erasing Sneakers (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:43",
+    "category_id": 4,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A pair of sneakers engineered by Rick for a young Beth that completely cancels out footstep sounds to allow totally silent movement.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#158_full.png",
+      "focus": "assets/season_03/episode_09/tag#158_focus.png"
+    }
+  },
+  {
+    "id": "tag#159",
+    "name": "False Fingerprints (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:45",
+    "category_id": 6,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A set of wearable artificial fingerprint overlays crafted by Rick for a young Beth to deceive biometric scanners and obscure forensic evidence.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#159_full.png",
+      "focus": "assets/season_03/episode_09/tag#159_focus.png"
+    }
+  },
+  {
+    "id": "tag#160",
+    "name": "Fall-Asleep Darts (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:47",
+    "category_id": 6,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A set of tranquilizer projectiles crafted by Rick for a young Beth that rapidly incapacitate targets by putting them to sleep upon contact.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#160_full.png",
+      "focus": "assets/season_03/episode_09/tag#160_focus.png"
+    }
+  },
+  {
+    "id": "tag#161",
+    "name": "Lie-Detecting Doll (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:48",
+    "category_id": 6,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A toy doll engineered by Rick for a young Beth that secretly functions as a high-precision polygraph to detect lies.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#161_full.png",
+      "focus": "assets/season_03/episode_09/tag#161_focus.png"
+    }
+  },
+  {
+    "id": "tag#162",
+    "name": "Indestructible Baseball Bat (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:50",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A blunt melee weapon engineered by Rick for a young Beth that is completely impervious to structural wear, damage, and destruction.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#162_full.png",
+      "focus": "assets/season_03/episode_09/tag#162_focus.png"
+    }
+  },
+  {
+    "id": "tag#163",
+    "name": "Ladybug-Shaped Taser (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:52",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A concealed electroshock weapon disguised as an innocent toy ladybug, crafted by Rick for a young Beth to stun targets with high-voltage charges.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#163_full.png",
+      "focus": "assets/season_03/episode_09/tag#163_focus.png"
+    }
+  },
+  {
+    "id": "tag#164",
+    "name": "Fake Police Badge (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:54",
+    "category_id": 6,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A counterfeit law enforcement shield crafted by Rick for a young Beth to impersonate authority figures and manipulate others.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#164_full.png",
+      "focus": "assets/season_03/episode_09/tag#164_focus.png"
+    }
+  },
+  {
+    "id": "tag#165",
+    "name": "Location Tracking Stickers",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:56",
+    "category_id": 6,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "Adhesive tracking decals engineered by Rick for a young Beth that secretly transmit real-time location coordinates of whatever person or object they are stuck onto.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#165_full.png",
+      "focus": "assets/season_03/episode_09/tag#165_focus.png"
+    }
+  },
+  {
+    "id": "tag#166",
+    "name": "Rainbow-Colored Duct Tape (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:57",
+    "category_id": 6,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A roll of heavy-duty, rainbow-patterned duct tape crafted by Rick among the bizarre restraining and concealing supplies requested by a young Beth.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#166_full.png",
+      "focus": "assets/season_03/episode_09/tag#166_focus.png"
+    }
+  },
+  {
+    "id": "tag#167",
+    "name": "Mind-Control Hair Clips (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "10:59",
+    "category_id": 6,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A set of wearable hair clips engineered by Rick for a young Beth that hijack the wearer's neural pathways to force complete mental compliance.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#167_full.png",
+      "focus": "assets/season_03/episode_09/tag#167_focus.png"
+    }
+  },
+  {
+    "id": "tag#168",
+    "name": "Poison Gum (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "11:02",
+    "category_id": 5,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A lethal chewing gum crafted by Rick as one of the dangerous childhood items requested by a young Beth.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#168_full.png",
+      "focus": "assets/season_03/episode_09/tag#168_focus.png"
+    }
+  },
+  {
+    "id": "tag#169",
+    "name": "Pink Sentient Switchblade (official)",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "11:02",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A pink, pocket switchblade knife built with artificial consciousness and speech that eagerly asks Beth who they are going to stab.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#169_full.png",
+      "focus": "assets/season_03/episode_09/tag#169_focus.png"
+    }
+  },
+  {
+    "id": "tag#170",
+    "name": "Rick's Custom Guitar",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "15:47",
+    "category_id": 6,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "An electric guitar customized by Rick featuring an onboard speaker and built-in amplifier directly on its body, allowing him to play loudly without external equipment.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#170_full.png",
+      "focus": "assets/season_03/episode_09/tag#170_focus.png"
+    }
+  },
+  {
+    "id": "tag#171",
+    "name": "Tissue Processing Tube & Gas Applicator",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "16:23",
+    "category_id": 3,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A benchtop glass cylinder paired with a hose-fed gas applicator used to treat and prepare small tissue samples or severed fingers with a chemical gas for cloning.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#171_full.png",
+      "focus": "assets/season_03/episode_09/tag#171_focus.png"
+    }
+  },
+  {
+    "id": "tag#172",
+    "name": "Baby Clone Microwave Oven",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "16:31",
+    "category_id": 3,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A microwave-like countertop appliance used by Rick that rapidly incubates processed genetic tissue to produce a living human baby clone.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#172_full.png",
+      "focus": "assets/season_03/episode_09/tag#172_focus.png"
     }
   }
 ]

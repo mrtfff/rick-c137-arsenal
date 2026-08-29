@@ -2535,6 +2535,21 @@
     }
   },
   {
+    "id": "tag#173",
+    "name": "Accelerated Growth Tank",
+    "season": 3,
+    "episode": 9,
+    "timestamp": "15:32",
+    "category_id": 3,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A massive, liquid-filled cylindrical vat in Rick's garage that rapidly ages and grows a cloned human infant into a fully developed adult within seconds.",
+    "images": {
+      "full": "assets/season_03/episode_09/tag#173_full.png",
+      "focus": "assets/season_03/episode_09/tag#173_focus.png"
+    }
+  },
+  {
     "id": "tag#170",
     "name": "Rick's Custom Guitar",
     "season": 3,
@@ -2555,7 +2570,7 @@
     "season": 3,
     "episode": 9,
     "timestamp": "16:23",
-    "category_id": 3,
+    "category_id": 6,
     "threat_level": 0,
     "c137_confirmed": true,
     "description": "A benchtop glass cylinder paired with a hose-fed gas applicator used to treat and prepare small tissue samples or severed fingers with a chemical gas for cloning.",
@@ -2577,6 +2592,126 @@
     "images": {
       "full": "assets/season_03/episode_09/tag#172_full.png",
       "focus": "assets/season_03/episode_09/tag#172_focus.png"
+    }
+  },
+  {
+    "id": "tag#174",
+    "name": "Handheld Alien Proximity Tracker",
+    "season": 3,
+    "episode": 10,
+    "timestamp": "01:19",
+    "category_id": 0,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A handheld detection device that emits audio beeps with increasing frequency as it gets closer to a targeted alien creature.",
+    "images": {
+      "full": "assets/season_03/episode_10/tag#174_full.png",
+      "focus": "assets/season_03/episode_10/tag#174_focus.png"
+    }
+  },
+  {
+    "id": "tag#175",
+    "name": "Reality-Sim VR Goggles",
+    "season": 3,
+    "episode": 10,
+    "timestamp": "06:09",
+    "category_id": 4,
+    "threat_level": 0,
+    "c137_confirmed": true,
+    "description": "A specialized virtual reality headset engineered by Rick that fully immerses the user's mind and physical perception directly into the interactive world of Minecraft.",
+    "images": {
+      "full": "assets/season_03/episode_10/tag#175_full.png",
+      "focus": "assets/season_03/episode_10/tag#175_focus.png"
+    }
+  },
+  {
+    "id": "tag#176",
+    "name": "Threat-Tracking Pulse",
+    "season": 3,
+    "episode": 10,
+    "timestamp": "13:04",
+    "category_id": 6,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "An expanding spherical sensor pulse emitted from Rick's cybernetics that detects hostile sightlines and projects holographic red markers revealing the exact location and count of snipers targeting him.",
+    "images": {
+      "full": "assets/season_03/episode_10/tag#176_full.png",
+      "focus": "assets/season_03/episode_10/tag#176_focus.png"
+    }
+  },
+  {
+    "id": "tag#177",
+    "name": "Invisible Bullet-Deflecting Shield",
+    "season": 3,
+    "episode": 10,
+    "timestamp": "13:06",
+    "category_id": 1,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "An invisible personal cybernetic force field projected around Rick that manifests circular blue energy ripples upon impact to deflect incoming bullets directly back at the shooters.",
+    "images": {
+      "full": "assets/season_03/episode_10/tag#177_full.png",
+      "focus": "assets/season_03/episode_10/tag#177_focus.png"
+    }
+  },
+  {
+    "id": "tag#178",
+    "name": "Wristwatch Laser",
+    "season": 3,
+    "episode": 10,
+    "timestamp": "13:43",
+    "category_id": 4,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A high-powered laser emitter integrated into Rick's wristwatch that can either fire rapid energy blasts or be sustained as a continuous cutting beam like an energy blade.",
+    "images": {
+      "full": "assets/season_03/episode_10/tag#178_full.png",
+      "focus": "assets/season_03/episode_10/tag#178_focus.png"
+    }
+  },
+  {
+    "id": "tag#179",
+    "name": "Telescopic Combat Staff",
+    "season": 3,
+    "episode": 10,
+    "timestamp": "16:24",
+    "category_id": 0,
+    "threat_level": 2,
+    "c137_confirmed": true,
+    "description": "A compact metal cylinder concealed inside Rick's lab coat that instantly expands into a full-length metallic staff for close-quarters melee combat.",
+    "images": {
+      "full": "assets/season_03/episode_10/tag#179_full.png",
+      "focus": "assets/season_03/episode_10/tag#179_focus.png"
+    }
+  },
+  {
+    "id": "tag#180",
+    "name": "Wristwatch Holographic Decoy",
+    "season": 3,
+    "episode": 10,
+    "timestamp": "16:36",
+    "category_id": 4,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A holographic decoy system integrated into Rick's wristwatch that projects multiple lifelike holographic clones of himself to confuse and distract enemies in combat.",
+    "images": {
+      "full": "assets/season_03/episode_10/tag#180_full.png",
+      "focus": "assets/season_03/episode_10/tag#180_focus.png"
+    }
+  },
+  {
+    "id": "tag#181",
+    "name": "Wristwatch Energy Hamster Ball",
+    "season": 3,
+    "episode": 10,
+    "timestamp": "16:47",
+    "category_id": 4,
+    "threat_level": 1,
+    "c137_confirmed": true,
+    "description": "A versatile translucent blue energy field projected from Rick's wristwatch that can expand into a rolling spherical hamster ball or contract to tightly mold around his body as form-fitting protective armor.",
+    "images": {
+      "full": "assets/season_03/episode_10/tag#181_full.png",
+      "focus": "assets/season_03/episode_10/tag#181_focus.png"
     }
   }
 ]

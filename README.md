@@ -9,26 +9,26 @@ A high-precision manual screen-capture logging and archiving system designed to 
 <!-- STATS:START -->
 | Metric | Value |
 | :--- | :--- |
-| Total Registered Inventions | **173** |
+| Total Registered Inventions | **182** |
 | Seasons Analyzed | **3** (Season 01 - 03) |
-| Episodes Analyzed | **30** |
-| Confirmed C-137 Invention Ratio | **98%** (171/173) |
+| Episodes Analyzed | **31** |
+| Confirmed C-137 Invention Ratio | **98%** (180/182) |
 
 ### Category Breakdown
-- **Handheld Weapon / Device:** 61 items
-- **Cybernetic / Body Implant:** 6 items
+- **Handheld Weapon / Device:** 63 items
+- **Cybernetic / Body Implant:** 7 items
 - **Vehicle / Adaptation:** 4 items
 - **Garage / Lab Equipment:** 23 items
-- **Wearable Equipment / Armor / Jetpack:** 29 items
+- **Wearable Equipment / Armor / Jetpack:** 34 items
 - **Biological / Genetic / Chemical Invention:** 12 items
-- **Other / Special Invention:** 25 items
+- **Other / Special Invention:** 26 items
 - **Unclassified / Unknown:** 2 items
 - **Ship-Mounted Device:** 11 items
 
 ### Threat Level Breakdown
-- **[0] Harmless / Utility:** 62 items
-- **[1] Indirect Hazard / Tactical:** 42 items
-- **[2] Personal Lethality:** 53 items
+- **[0] Harmless / Utility:** 64 items
+- **[1] Indirect Hazard / Tactical:** 45 items
+- **[2] Personal Lethality:** 57 items
 - **[3] Area Destruction:** 8 items
 - **[4] Planetary Threat:** 4 items
 - **[5] Multiversal / Reality Bending:** 0 items
